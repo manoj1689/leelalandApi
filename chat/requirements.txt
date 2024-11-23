@@ -1,0 +1,17 @@
+PyJWT
+pydantic[email]
+
+fastapi
+uvicorn
+sqlalchemy
+pillow
+rembg
+slowapi
+pytest
+httpx
+pytest-asyncio
+boto3 
+python-multipart
+python-dotenv
+cryptography
+openai

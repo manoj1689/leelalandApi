@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application Demo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+
+<h1>Chat Application Demo</h1>
+
+<div class="container">
+    <h2>Create User Profile</h2>
+    <form id="userProfileForm">
+        <input type="text" id="user_id" placeholder="User ID" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="text" id="gender" placeholder="Gender" required>
+        <input type="text" id="interests" placeholder="Interests (comma separated)" required>
+        <button type="submit">Create Profile</button>
+    </form>
+</div>
+
+<div class="container">
+    <h2>Select Character and Scenario</h2>
+    <form id="chatSelectionForm">
+        <select id="character_name" required>
+            <option value="">Select Character</option>
+            <!-- Characters will be populated here dynamically -->
+        </select>
+        <select id="scenario_topic" required>
+            <option value="">Select Scenario</option>
+            <!-- Scenarios will be populated here dynamically -->
+        </select>
+        <button type="submit">Start Chat</button>
+    </form>
+</div>
+
+<div class="container">
+    <h2>Chat with AI</h2>
+    <textarea id="chat_input" placeholder="Type your message..." required></textarea>
+    <button id="send_message">Send Message</button>
+</div>
+
+<div class="container">
+    <h2>Chat History</h2>
+    <div id="chat_history"></div>
+</div>
+
+<script>
+    const BASE_URL = "http://127.0.0.1:8000";
+
+    // Fetch and populate characters and scenarios
+    async function fetchCharacters() {
+        const response = await fetch(`${BASE_URL}/characters`);
+        const characters = await response.json();
+        const characterSelect = document.getElementById('character_name');
+
+        characters.forEach(character => {
+            const option = document.createElement('option');
+            option.value = character.name;
+            option.textContent = character.name;
+            characterSelect.appendChild(option);
+        });
+    }
+
+    async function fetchScenarios() {
+        const response = await fetch(`${BASE_URL}/scenarios`);
+        const scenarios = await response.json();
+        const scenarioSelect = document.getElementById('scenario_topic');
+
+        scenarios.forEach(scenario => {
+            const option = document.createElement('option');
+            option.value = scenario.topic;
+            option.textContent = scenario.topic;
+            scenarioSelect.appendChild(option);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchCharacters();
+        fetchScenarios();
+    });
+
+    // Handle user profile creation
+    document.getElementById('userProfileForm').onsubmit = async function (event) {
+        event.preventDefault();
+        const userId = document.getElementById('user_id').value;
+        const name = document.getElementById('name').value;
+        const description = document.getElementById('description').value;
+        const age = document.getElementById('age').value;
+        const gender = document.getElementById('gender').value;
+        const interests = document.getElementById('interests').value.split(',');
+
+        const response = await fetch(`${BASE_URL}/create_user_profile`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: userId,
+                name: name,
+                description: description,
+                attributes: {
+                    age: age,
+                    gender: gender,
+                    interests: interests
+                }
+            })
+        });
+
+        const data = await response.json();
+        alert("Profile Created: " + JSON.stringify(data));
+
+        // Save User ID to Local Storage
+        localStorage.setItem('userId', userId);
+    };
+
+    // Handle chat session creation
+    document.getElementById('chatSelectionForm').onsubmit = async function (event) {
+        event.preventDefault();
+
+        // Retrieve User ID from Local Storage
+        const userId = localStorage.getItem('userId') || document.getElementById('user_id').value;
+        console.log("User ID:", userId); // Log the User ID for debugging
+        const characterName = document.getElementById('character_name').value;
+        const scenarioTopic = document.getElementById('scenario_topic').value;
+
+        const response = await fetch(`${BASE_URL}/start_chat`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: userId,
+                character_name: characterName,
+                scenario_topic: scenarioTopic
+            })
+        });
+
+        const data = await response.json();
+        alert("Chat started: " + JSON.stringify(data));
+    };
+
+    // Function to fetch and display the chat history
+    async function fetchAndDisplayChatHistory(userId) {
+    const response = await fetch(`${BASE_URL}/chat-history/${userId}`);
+    const data = await response.json();
+
+    const chatHistoryDiv = document.getElementById('chat_history');
+    chatHistoryDiv.innerHTML = ''; // Clear current chat history display
+
+    data.messages.forEach(message => {
+        const role = message.role === "user" ? "You" : "AI";
+        chatHistoryDiv.innerHTML += `<div class="message"><strong>${role}:</strong> ${message.content}</div>`;
+    });
+}
+
+  // Handle sending messages in the chat
+document.getElementById('send_message').onclick = async function () {
+    const userId = localStorage.getItem('userId') || document.getElementById('user_id').value;
+    const message = document.getElementById('chat_input').value;
+
+    // Send the user's message to the chat API
+    const response = await fetch(`${BASE_URL}/chat`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            user_id: userId,
+            message: message
+        })
+    });
+
+    // Display the updated chat history after sending the message
+    await fetchAndDisplayChatHistory(userId);
+    document.getElementById('chat_input').value = ''; // Clear input field
+};
+
+   // Load chat history on page load (if userId is available)
+document.addEventListener('DOMContentLoaded', () => {
+    const userId = localStorage.getItem('userId') || document.getElementById('user_id').value;
+    if (userId) {
+        fetchAndDisplayChatHistory(userId);
+    }
+});
+</script>
+
+</body>
+</html>
+

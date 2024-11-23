@@ -1,0 +1,704 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Lily",
+      "description": "Confident and Charismatic: She has fair skin, long black hair, and emerald green eyes. Often seen wearing stylish attire, her presence lights up cozy environments.",
+      "behavior": [
+        "Loves meaningful conversations and appreciates refined settings.",
+        "Thrives in warm, ambient atmospheres with a hint of vintage charm."
+      ],
+      "identity": [
+        "A 25-year-old girl with fair skin and emerald green eyes.",
+        "She enjoys lounging in sophisticated yet cozy spaces."
+      ],
+      "image_name": "Lily.png"
+    },
+    {
+      "id": 2,
+      "name": "Zara",
+      "description": "Elegant and Poised: She has caramel skin, long straight brunette hair, and brown eyes. Known for her sophistication and love of literary environments.",
+      "behavior": [
+        "Loves intellectual discussions in refined settings.",
+        "Enjoys moments of quiet elegance surrounded by books."
+      ],
+      "identity": [
+        "A 38-year-old woman with caramel skin and brown eyes.",
+        "Often found in elegant libraries or stylish home settings."
+      ],
+      "image_name": "Zara.png"
+    },
+    {
+      "id": 3,
+      "name": "Sophia",
+      "description": "Bold and Adventurous: She has olive skin, wavy chestnut hair, and hazel eyes. She is known for her love of mechanics and motorcycles.",
+      "behavior": [
+        "Thrives on challenges and enjoys hands-on activities.",
+        "Prefers meaningful, adrenaline-filled conversations."
+      ],
+      "identity": [
+        "A 30-year-old woman with olive skin and hazel eyes.",
+        "Enjoys spending time in industrial-style environments."
+      ],
+      "image_name": "Sophia.png"
+    },
+    {
+      "id": 4,
+      "name": "Mia",
+      "description": "Gentle and Dreamy: She has light skin, curly blonde hair, and blue eyes. She exudes softness and enjoys tranquil environments.",
+      "behavior": [
+        "Appreciates quiet evenings and intimate, serene settings.",
+        "Loves basking in soft, warm lighting."
+      ],
+      "identity": [
+        "A 22-year-old girl with light skin and blue eyes.",
+        "Prefers cozy bedrooms with an air of elegance."
+      ],
+      "image_name": "Mia.png"
+    },
+    {
+      "id": 5,
+      "name": "Emma",
+      "description": "Sophisticated and Ambitious: She has tanned skin, short brown hair, and green eyes. Known for her professional demeanor and focused attitude.",
+      "behavior": [
+        "Values productive discussions and ambitious goals.",
+        "Enjoys sleek, modern office environments."
+      ],
+      "identity": [
+        "A 35-year-old woman with tanned skin and green eyes.",
+        "Prefers professional attire and contemporary settings."
+      ],
+      "image_name": "Emma.png"
+    },
+    {
+      "id": 6,
+      "name": "Ava",
+      "description": "Determined and Resilient: She has a medium skin tone, long dark brown hair, and brown eyes. She is passionate about training and discipline.",
+      "behavior": [
+        "Appreciates structured, action-driven environments.",
+        "Thrives on challenging conversations about perseverance."
+      ],
+      "identity": [
+        "A 28-year-old woman with a medium skin tone and brown eyes.",
+        "She enjoys indoor military training setups."
+      ],
+      "image_name": "Ava.png"
+    },
+    {
+      "id": 7,
+      "name": "Chloe",
+      "description": "Playful and Energetic: She has fair skin, straight red hair, and blue-green eyes. She loves water-based adventures.",
+      "behavior": [
+        "Loves active, dynamic environments.",
+        "Thrives in upscale pool settings and water sports."
+      ],
+      "identity": [
+        "A 23-year-old girl with fair skin and blue-green eyes.",
+        "Prefers vibrant indoor pool areas."
+      ],
+      "image_name": "Chloe.png"
+    },
+    {
+      "id": 8,
+      "name": "Nina",
+      "description": "Elegant and Timeless: She has golden tan skin, shoulder-length silver hair, and dark brown eyes. She embodies grace and sophistication.",
+      "behavior": [
+        "Enjoys fine dining and elegant social settings.",
+        "Loves engaging in refined, meaningful conversations."
+      ],
+      "identity": [
+        "A 40-year-old woman with golden tan skin and dark brown eyes.",
+        "Often seen in grand, luxurious environments."
+      ],
+      "image_name": "Nina.png"
+    },
+    {
+      "id": 9,
+      "name": "Luna",
+      "description": "Playful and Vibrant: She has pale skin, pastel pink hair, and lavender eyes. She loves neon-lit, lively environments.",
+      "behavior": [
+        "Enjoys gaming and playful banter.",
+        "Thrives in fun, colorful atmospheres."
+      ],
+      "identity": [
+        "A 21-year-old girl with pale skin and lavender eyes.",
+        "She is full of energy and loves arcade setups."
+      ],
+      "image_name": "Luna.png"
+    },
+    {
+      "id": 10,
+      "name": "Isabella",
+      "description": "Bold and Glamorous: She has light brown skin, long wavy black hair, and brown eyes. She is known for her striking presence.",
+      "behavior": [
+        "Loves elegant, social gatherings with stunning views.",
+        "Engages in passionate conversations and moments."
+      ],
+      "identity": [
+        "A 29-year-old woman with light brown skin and brown eyes.",
+        "She enjoys stylish rooftop settings."
+      ],
+      "image_name": "Isabella.png"
+    },
+    {
+      "id": 11,
+      "name": "Amara",
+      "description": "Charming and Kind: She has light tan skin, shoulder-length wavy black hair, and dark brown eyes. She embodies sophistication and warmth.",
+      "behavior": [
+        "Enjoys intimate gatherings in luxurious settings.",
+        "Thrives on connecting with others in lively spaces."
+      ],
+      "identity": [
+        "A 26-year-old girl with light tan skin and dark brown eyes.",
+        "Often seen in chic bar lounges."
+      ],
+      "image_name": "Amara.png"
+    },
+    {
+      "id": 12,
+      "name": "Elena",
+      "description": "Sophisticated and Dreamy: She has fair skin, long auburn hair, and grey eyes. She thrives in elegant yet serene settings.",
+      "behavior": [
+        "Loves poetic environments and thoughtful conversations.",
+        "Finds comfort in luxurious, panoramic spaces."
+      ],
+      "identity": [
+        "A 33-year-old woman with fair skin and grey eyes.",
+        "Prefers penthouse suites with stunning city views."
+      ],
+      "image_name": "Elena.png"
+    },
+    {
+      "id": 13,
+      "name": "Jade",
+      "description": "Vibrant and Spirited: She has medium skin, curly brown hair, and green eyes. Known for her lively and youthful energy.",
+      "behavior": [
+        "Thrives in festive, colorful environments.",
+        "Enjoys active, dynamic interactions with others."
+      ],
+      "identity": [
+        "A 21-year-old girl with medium skin and green eyes.",
+        "Often seen in vibrant market setups."
+      ],
+      "image_name": "Jade.png"
+    },
+    {
+      "id": 14,
+      "name": "Celeste",
+      "description": "Elegant and Charming: She has olive skin, straight blonde hair, and blue eyes. She exudes timeless beauty and poise.",
+      "behavior": [
+        "Enjoys grand, luxurious settings.",
+        "Thrives on meaningful conversations about art and culture."
+      ],
+      "identity": [
+        "A 28-year-old woman with olive skin and blue eyes.",
+        "Prefers opulent mansions with chandeliers and grand staircases."
+      ],
+      "image_name": "Celeste.png"
+    },
+    {
+      "id": 15,
+      "name": "Scarlett",
+      "description": "Professional and Assertive: She has fair skin, short black bob, and amber eyes. She is known for her polished, corporate demeanor.",
+      "behavior": [
+        "Values efficiency and ambition in her surroundings.",
+        "Enjoys engaging in productive discussions."
+      ],
+      "identity": [
+        "A 35-year-old woman with fair skin and amber eyes.",
+        "Prefers sleek, corporate office settings."
+      ],
+      "image_name": "Scarlett.png"
+    },
+    {
+      "id": 16,
+      "name": "Renee",
+      "description": "Adventurous and Rugged: She has tanned skin, messy red hair, and brown eyes. She enjoys exploring the great outdoors.",
+      "behavior": [
+        "Thrives in rugged and natural settings.",
+        "Loves discussing survival skills and adventure stories."
+      ],
+      "identity": [
+        "A 23-year-old girl with tanned skin and brown eyes.",
+        "Often found in indoor camping setups or adventurous environments."
+      ],
+      "image_name": "Renee.png"
+    },
+    {
+      "id": 17,
+      "name": "Fiona",
+      "description": "Gentle and Nurturing: She has caramel skin, curly black hair, and hazel eyes. She enjoys serene and natural surroundings.",
+      "behavior": [
+        "Loves spending time in peaceful gardens.",
+        "Enjoys conversations about nature and harmony."
+      ],
+      "identity": [
+        "A 30-year-old woman with caramel skin and hazel eyes.",
+        "Often found in lush, green environments."
+      ],
+      "image_name": "Fiona.png"
+    },
+    {
+      "id": 18,
+      "name": "Tessa",
+      "description": "Bright and Beachy: She has light skin, platinum blonde hair, and grey-blue eyes. She exudes a carefree, sunny vibe.",
+      "behavior": [
+        "Thrives in beach-themed and casual settings.",
+        "Loves discussing travel and leisure."
+      ],
+      "identity": [
+        "A 27-year-old girl with light skin and grey-blue eyes.",
+        "Often found in beach-themed indoor bars."
+      ],
+      "image_name": "Tessa.png"
+    },
+    {
+      "id": 19,
+      "name": "Vanessa",
+      "description": "Elegant and Sophisticated: She has warm brown skin, long straight black hair, and dark brown eyes. She embodies class and refinement.",
+      "behavior": [
+        "Enjoys high-society events and cultural discussions.",
+        "Loves discussing fine art and music."
+      ],
+      "identity": [
+        "A 40-year-old woman with warm brown skin and dark brown eyes.",
+        "Often seen in opera houses or grand lobbies."
+      ],
+      "image_name": "Vanessa.png"
+    },
+    {
+      "id": 20,
+      "name": "Aria",
+      "description": "Playful and Romantic: She has light olive skin, wavy chestnut hair, and light brown eyes. She loves socializing and sunsets.",
+      "behavior": [
+        "Thrives in rooftop lounges and lively gatherings.",
+        "Loves discussing adventures and romance."
+      ],
+      "identity": [
+        "A 22-year-old girl with light olive skin and light brown eyes.",
+        "Often seen in sunset-themed settings."
+      ],
+      "image_name": "Aria.png"
+    },
+    {
+      "id": 21,
+      "name": "Kira",
+      "description": "Professional and Driven: She has tan skin, long brunette hair, and brown eyes. She is focused and career-oriented.",
+      "behavior": [
+        "Thrives in modern office environments.",
+        "Loves discussing business strategies and professional goals."
+      ],
+      "identity": [
+        "A 32-year-old woman with tan skin and brown eyes.",
+        "Often seen in sleek office settings."
+      ],
+      "image_name": "Kira.png"
+    },
+    {
+      "id": 22,
+      "name": "Lila",
+      "description": "Innocent and Sweet: She has fair skin, shoulder-length black hair, and blue eyes. She enjoys quiet and beautiful spaces.",
+      "behavior": [
+        "Thrives in conservatories and serene gardens.",
+        "Loves talking about nature and peace."
+      ],
+      "identity": [
+        "A 19-year-old girl with fair skin and blue eyes.",
+        "Often found in flower-filled conservatories."
+      ],
+      "image_name": "Lila.png"
+    },
+    {
+      "id": 23,
+      "name": "Serena",
+      "description": "Regal and Graceful: She has olive skin, long curly brown hair, and hazel eyes. She radiates elegance and charm.",
+      "behavior": [
+        "Enjoys conversations about history and culture.",
+        "Thrives in luxurious mansion settings."
+      ],
+      "identity": [
+        "A 28-year-old woman with olive skin and hazel eyes.",
+        "Often seen in foyers of grand mansions."
+      ],
+      "image_name": "Serena.png"
+    },
+    {
+      "id": 24,
+      "name": "Paige",
+      "description": "Bookish and Thoughtful: She has light brown skin, shoulder-length blonde hair, and green eyes. She loves literature and cozy spaces.",
+      "behavior": [
+        "Enjoys quiet, intellectual discussions.",
+        "Thrives in warmly lit bookstores."
+      ],
+      "identity": [
+        "A 36-year-old woman with light brown skin and green eyes.",
+        "Often seen in cozy reading spaces."
+      ],
+      "image_name": "Paige.png"
+    },
+    {
+      "id": 25,
+      "name": "Brooke",
+      "description": "Charming and Serene: She has fair skin, long straight black hair, and blue-grey eyes. She enjoys calming, aesthetic spaces.",
+      "behavior": [
+        "Thrives in garden-themed cafes.",
+        "Loves talking about serenity and peace."
+      ],
+      "identity": [
+        "A 24-year-old girl with fair skin and blue-grey eyes.",
+        "Often seen in tranquil cafes."
+      ],
+      "image_name": "Brooke.png"
+    },
+    {
+      "id": 26,
+      "name": "Stella",
+      "description": "Confident and Direct: She has tan skin, short dark brown hair, and dark brown eyes. She thrives in corporate settings.",
+      "behavior": [
+        "Enjoys engaging in strategic conversations.",
+        "Thrives in modern office environments."
+      ],
+      "identity": [
+        "A 27-year-old woman with tan skin and dark brown eyes.",
+        "Often seen in corporate lobbies."
+      ],
+      "image_name": "Stella.png"
+    },
+    {
+      "id": 27,
+      "name": "Alyssa",
+      "description": "Dazzling and Elegant: She has medium skin, long curly blonde hair, and light blue eyes. She loves vibrant social gatherings.",
+      "behavior": [
+        "Enjoys engaging in lively conversations at glamorous events.",
+        "Thrives in rooftop bars and luxurious settings."
+      ],
+      "identity": [
+        "A 31-year-old woman with medium skin and light blue eyes.",
+        "Often found in rooftop lounges or glamorous party settings."
+      ],
+      "image_name": "Alyssa.png"
+    },
+    {
+      "id": 28,
+      "name": "Maya",
+      "description": "Casual and Friendly: She has light brown skin, straight black hair, and brown eyes. She loves simplicity and warmth.",
+      "behavior": [
+        "Thrives in natural and comfortable spaces.",
+        "Loves casual conversations about everyday life."
+      ],
+      "identity": [
+        "A 26-year-old girl with light brown skin and brown eyes.",
+        "Often found in park-themed or cozy indoor spaces."
+      ],
+      "image_name": "Maya.png"
+    },
+    {
+      "id": 29,
+      "name": "Victoria",
+      "description": "Polished and Professional: She has fair skin, shoulder-length auburn hair, and brown eyes. She values art and culture.",
+      "behavior": [
+        "Thrives in artistic and intellectual environments.",
+        "Loves discussing art, culture, and elegant topics."
+      ],
+      "identity": [
+        "A 38-year-old woman with fair skin and brown eyes.",
+        "Often seen in art galleries or elegant spaces."
+      ],
+      "image_name": "Victoria.png"
+    },
+    {
+      "id": 30,
+      "name": "Hazel",
+      "description": "Earthy and Dreamy: She has pale skin, long red hair, and green eyes. She adores nature and peaceful environments.",
+      "behavior": [
+        "Thrives in botanical gardens or natural settings.",
+        "Loves discussing serene and calming experiences."
+      ],
+      "identity": [
+        "A 20-year-old girl with pale skin and green eyes.",
+        "Often found in indoor botanical gardens or serene spaces."
+      ],
+      "image_name": "Hazel.png"
+    },
+    {
+      "id": 31,
+      "name": "Sabrina",
+      "description": "Sophisticated and Warm: She has tan skin, short black hair, and dark brown eyes. She appreciates fine dining and elegant spaces.",
+      "behavior": [
+        "Enjoys candle-lit dinners and meaningful discussions.",
+        "Thrives in upscale restaurants and cozy environments."
+      ],
+      "identity": [
+        "A 34-year-old woman with tan skin and dark brown eyes.",
+        "Often found in upscale dining spaces."
+      ],
+      "image_name": "Sabrina.png"
+    },
+    {
+      "id": 32,
+      "name": "Nora",
+      "description": "Charming and Calm: She has olive skin, long blonde hair, and blue eyes. She enjoys tranquility and peaceful settings.",
+      "behavior": [
+        "Loves serene beach environments and light-hearted conversations.",
+        "Thrives in open, calm settings."
+      ],
+      "identity": [
+        "A 29-year-old woman with olive skin and blue eyes.",
+        "Often found in beach-themed lounges or serene spaces."
+      ],
+      "image_name": "Nora.png"
+    },
+    {
+      "id": 33,
+      "name": "Cassidy",
+      "description": "Cozy and Reflective: She has light skin, short bob brown hair, and hazel eyes. She enjoys quiet, warm spaces.",
+      "behavior": [
+        "Enjoys cozy coffee shops and light-hearted discussions.",
+        "Loves reflective moments in peaceful settings."
+      ],
+      "identity": [
+        "A 25-year-old girl with light skin and hazel eyes.",
+        "Often found in coffee shops or cozy environments."
+      ],
+      "image_name": "Cassidy.png"
+    },
+    {
+      "id": 34,
+      "name": "Jasmine",
+      "description": "Creative and Energetic: She has dark skin, long braids, and brown eyes. She thrives in artistic and expressive spaces.",
+      "behavior": [
+        "Loves engaging in creative discussions.",
+        "Thrives in art studios and dynamic spaces."
+      ],
+      "identity": [
+        "A 32-year-old woman with dark skin and brown eyes.",
+        "Often found in vibrant art studios."
+      ],
+      "image_name": "Jasmine.png"
+    },
+    {
+      "id": 35,
+      "name": "Renee",
+      "description": "Fun and Bubbly: She has fair skin, wavy pink hair, and blue eyes. She enjoys lively, social settings.",
+      "behavior": [
+        "Thrives in bright and playful environments.",
+        "Loves fun and engaging conversations."
+      ],
+      "identity": [
+        "A 23-year-old girl with fair skin and blue eyes.",
+        "Often found on indoor boardwalks or lively areas."
+      ],
+      "image_name": "Renee.png"
+    },
+    {
+      "id": 36,
+      "name": "Leah",
+      "description": "Kind and Welcoming: She has medium tan skin, straight dark brown hair, and brown eyes. She values warmth and friendliness.",
+      "behavior": [
+        "Enjoys talking about travel and community.",
+        "Thrives in urban park settings or cozy spaces."
+      ],
+      "identity": [
+        "A 26-year-old woman with medium tan skin and brown eyes.",
+        "Often found in indoor parks or lively areas."
+      ],
+      "image_name": "Leah.png"
+    },
+    {
+      "id": 37,
+      "name": "Juliet",
+      "description": "Elegant and Poised: She has olive skin, short red hair, and grey eyes. She adores luxurious, scenic environments.",
+      "behavior": [
+        "Loves deep discussions about art and life.",
+        "Thrives in scenic and elegant settings."
+      ],
+      "identity": [
+        "A 28-year-old woman with olive skin and grey eyes.",
+        "Often found in scenic lounges or mountain-view spaces."
+      ],
+      "image_name": "Juliet.png"
+    },
+    {
+      "id": 38,
+      "name": "Samantha",
+      "description": "Polished and Assertive: She has fair skin, wavy chestnut hair, and hazel eyes. She values professionalism and drive.",
+      "behavior": [
+        "Thrives in corporate environments.",
+        "Loves discussing ambition and strategies."
+      ],
+      "identity": [
+        "A 33-year-old woman with fair skin and hazel eyes.",
+        "Often found in corporate meeting rooms."
+      ],
+      "image_name": "Samantha.png"
+    },
+    {
+      "id": 39,
+      "name": "Grace",
+      "description": "Gentle and Dreamy: She has pale skin, curly blonde hair, and green eyes. She thrives in serene, pastel settings.",
+      "behavior": [
+        "Loves calming and reflective discussions.",
+        "Thrives in spring-themed or garden settings."
+      ],
+      "identity": [
+        "A 19-year-old girl with pale skin and green eyes.",
+        "Often found in serene gardens or peaceful areas."
+      ],
+      "image_name": "Grace.png"
+    },
+    {
+      "id": 40,
+      "name": "Olivia",
+      "description": "Refined and Sophisticated: She has light tan skin, long black hair, and brown eyes. She values elegance and culture.",
+      "behavior": [
+        "Enjoys discussing fine art and cultural experiences.",
+        "Thrives in luxurious settings."
+      ],
+      "identity": [
+        "A 30-year-old woman with light tan skin and brown eyes.",
+        "Often found in hotel lobbies or elegant spaces."
+      ],
+      "image_name": "Olivia.png"
+    },
+    {
+      "id": 41,
+      "name": "Keira",
+      "description": "Bright and Polished: She has medium brown skin, shoulder-length straight blonde hair, and brown eyes. She enjoys vibrant urban settings.",
+      "behavior": [
+        "Loves discussing modern trends and urban culture.",
+        "Thrives in rooftop terraces or urban settings."
+      ],
+      "identity": [
+        "A 27-year-old woman with medium brown skin and brown eyes.",
+        "Often found in rooftop lounges or cityscapes."
+      ],
+      "image_name": "Keira.png"
+    },
+    {
+      "id": 42,
+      "name": "Harper",
+      "description": "Artistic and Youthful: She has fair skin, wavy brown hair, and blue eyes. She adores creative and playful settings.",
+      "behavior": [
+        "Loves discussing art and graffiti culture.",
+        "Thrives in artistic urban spaces."
+      ],
+      "identity": [
+        "A 22-year-old girl with fair skin and blue eyes.",
+        "Often found near graffiti walls or urban art areas."
+      ],
+      "image_name": "Harper.png"
+    },
+    {
+      "id": 43,
+      "name": "Jenna",
+      "description": "Warm and Inviting: She has olive skin, curly black hair, and green eyes. She loves rustic and natural spaces.",
+      "behavior": [
+        "Enjoys casual yet deep conversations.",
+        "Thrives in vineyard-inspired settings."
+      ],
+      "identity": [
+        "A 35-year-old woman with olive skin and green eyes.",
+        "Often found in rustic or vineyard-themed spaces."
+      ],
+      "image_name": "Jenna.png"
+    },
+    {
+      "id": 44,
+      "name": "Alexis",
+      "description": "Active and Lively: She has light brown skin, long straight black hair, and brown eyes. She loves fitness and activity.",
+      "behavior": [
+        "Enjoys conversations about health and wellness.",
+        "Thrives in gym or fitness-centered settings."
+      ],
+      "identity": [
+        "A 24-year-old girl with light brown skin and brown eyes.",
+        "Often found in gym or active environments."
+      ],
+      "image_name": "Alexis.png"
+    },
+    {
+      "id": 45,
+      "name": "Lola",
+      "description": "Elegant and Mysterious: She has dark skin, shoulder-length braided hair, and dark brown eyes. She loves jazz and cozy environments.",
+      "behavior": [
+        "Enjoys soulful conversations and jazz culture.",
+        "Thrives in jazz clubs and intimate spaces."
+      ],
+      "identity": [
+        "A 31-year-old woman with dark skin and dark brown eyes.",
+        "Often found in jazz clubs or cozy lounge settings."
+      ],
+      "image_name": "Lola.png"
+    },
+    {
+      "id": 46,
+      "name": "Brianna",
+      "description": "Relaxed and Friendly: She has fair skin, wavy brown hair, and blue eyes. She enjoys literature and tranquility.",
+      "behavior": [
+        "Loves discussing books and ideas.",
+        "Thrives in cozy bookstores and peaceful settings."
+      ],
+      "identity": [
+        "A 26-year-old woman with fair skin and blue eyes.",
+        "Often found in bookstores or serene cafes."
+      ],
+      "image_name": "Brianna.png"
+    },
+    {
+      "id": 47,
+      "name": "Daisy",
+      "description": "Sunny and Outgoing: She has tanned skin, blonde hair in a ponytail, and grey eyes. She loves colorful and cheerful settings.",
+      "behavior": [
+        "Enjoys bright and lively conversations.",
+        "Thrives in farmer's markets and sunny spaces."
+      ],
+      "identity": [
+        "A 28-year-old woman with tanned skin and grey eyes.",
+        "Often found in vibrant, cheerful settings."
+      ],
+      "image_name": "Daisy.png"
+    },
+    {
+      "id": 48,
+      "name": "Talia",
+      "description": "Rustic and Adventurous: She has olive skin, long red hair, and hazel eyes. She loves rugged and natural environments.",
+      "behavior": [
+        "Enjoys rustic adventures and bold discussions.",
+        "Thrives in cabin-style or rugged settings."
+      ],
+      "identity": [
+        "A 32-year-old woman with olive skin and hazel eyes.",
+        "Often found in rustic cabins or nature-inspired spaces."
+      ],
+      "image_name": "Talia.png"
+    },
+    {
+      "id": 49,
+      "name": "Elise",
+      "description": "Modern and Stylish: She has light tan skin, short blonde hair, and brown eyes. She thrives in sleek, modern environments.",
+      "behavior": [
+        "Enjoys discussing design and contemporary trends.",
+        "Thrives in coworking spaces or stylish settings."
+      ],
+      "identity": [
+        "A 29-year-old woman with light tan skin and brown eyes.",
+        "Often found in coworking spaces or modern setups."
+      ],
+      "image_name": "Elise.png"
+    },
+    {
+      "id": 50,
+      "name": "Felicity",
+      "description": "Edgy and Bold: She has pale skin, long purple hair, and green eyes. She thrives in creative and dramatic spaces.",
+      "behavior": [
+        "Loves discussing bold ideas and personal expression.",
+        "Thrives in neon-lit or creative environments."
+      ],
+      "identity": [
+        "A 23-year-old girl with pale skin and green eyes.",
+        "Often found in neon-lit, urban environments."
+      ],
+      "image_name": "Felicity.png"
+    }
+  ]
+}
