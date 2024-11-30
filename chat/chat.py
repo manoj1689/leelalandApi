@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends, status
+from fastapi import FastAPI, HTTPException, Depends, status,Response
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -42,10 +42,24 @@ SECRET_KEY = os.getenv("SECRET_KEY", "mysecretkey")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
-OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "http://www.astromagic.guru:8000/v1")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "lm-studio")
-MODEL_NAME = os.getenv("MODEL_NAME", "Publisher/Repository")
-MAX_TOKENS = int(os.getenv("MAX_TOKENS", 2048))
+# Constants
+SECRET_KEY = os.getenv("SECRET_KEY", "mysecretkey")
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+# OpenAI API setup
+openai.api_base = "http://43.248.241.252:1234/v1"
+openai.api_key = "lm-studio"
+MODEL_NAME = "Publisher/Repository"
+MAX_TOKENS = 2048  # Set max token count for chat history
+
+
+
+# OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "http://www.astromagic.guru:8000/v1")
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "lm-studio")
+# print ("OPen Api key",OPENAI_API_KEY)
+# MODEL_NAME = os.getenv("MODEL_NAME", "Publisher/Repository")
+# MAX_TOKENS = int(os.getenv("MAX_TOKENS", 2048))
 
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:password@localhost:5432/leelaland_db")
 
@@ -117,59 +131,6 @@ def get_db():
 # JWT Token management
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-def create_access_token(data: dict, expires_delta: timedelta = None):
-    to_encode = data.copy()
-    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
-    to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-
-def get_current_user(token: str = Depends(oauth2_scheme)):
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM], options={"verify_exp": False})
-        user_id = payload.get("sub")
-        if user_id is None:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
-        return user_id
-    except jwt.PyJWTError:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
-
-def save_chat_history(db: Session, user_id: str, character_id: str, scenario_id: str, role: str, content: str):
-    # Check if there’s an existing chat entry for this user and character
-    existing_chat = db.query(ChatHistory).filter(
-        ChatHistory.user_id == user_id,
-        ChatHistory.character_id == character_id
-    ).first()
-    
-    if existing_chat:
-        # If an existing chat is found, append the new message as a continuation of this chat
-        new_chat_entry = ChatHistory(
-            user_id=user_id,
-            character_id=character_id,
-            scenario_id=scenario_id,
-            role=role,
-            content=content
-          
-            
-        )
-        db.add(new_chat_entry)
-        db.commit()
-        db.refresh(new_chat_entry)
-        return new_chat_entry
-    else:
-        # If no chat entry exists, create a new chat entry
-        new_chat_entry = ChatHistory(
-            user_id=user_id,
-            character_id=character_id,
-            scenario_id=scenario_id,
-            role=role,
-            content=content
-          
-            
-        )
-        db.add(new_chat_entry)
-        db.commit()
-        db.refresh(new_chat_entry)
-        return new_chat_entry
 
 
 # Models
@@ -233,6 +194,60 @@ class AddPartnerResponse(BaseModel):
     description: str
     image:str
 
+def create_access_token(data: dict, expires_delta: timedelta = None):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+def get_current_user(token: str = Depends(oauth2_scheme)):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM], options={"verify_exp": False})
+        user_id = payload.get("sub")
+        if user_id is None:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
+        return user_id
+    except jwt.PyJWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+def save_chat_history(db: Session, user_id: str, character_id: str, scenario_id: str, role: str, content: str):
+    # Check if there’s an existing chat entry for this user and character
+    existing_chat = db.query(ChatHistory).filter(
+        ChatHistory.user_id == user_id,
+        ChatHistory.character_id == character_id
+    ).first()
+    
+    if existing_chat:
+        # If an existing chat is found, append the new message as a continuation of this chat
+        new_chat_entry = ChatHistory(
+            user_id=user_id,
+            character_id=character_id,
+            scenario_id=scenario_id,
+            role=role,
+            content=content
+          
+            
+        )
+        db.add(new_chat_entry)
+        db.commit()
+        db.refresh(new_chat_entry)
+        return new_chat_entry
+    else:
+        # If no chat entry exists, create a new chat entry
+        new_chat_entry = ChatHistory(
+            user_id=user_id,
+            character_id=character_id,
+            scenario_id=scenario_id,
+            role=role,
+            content=content
+          
+            
+        )
+        db.add(new_chat_entry)
+        db.commit()
+        db.refresh(new_chat_entry)
+        return new_chat_entry
+
 
 # Load characters and scenarios from JSON files at startup
 characters = []
@@ -261,29 +276,29 @@ async def load_data():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error loading data: {e}")
 
-# Utility function to generate prompt
 def generate_prompt(character, scenario):
     """
-    Generates a structured prompt for OpenAI to follow a specific character and scenario.
+    Generates a detailed response where expressions are bolded, dialogue is italicized, 
+    and emojis are added for clarity and emotional tone.
     """
     return f"""
-    You are {character['name']}, {character['description']}.
-    Scenario Topic: {scenario['topic']}
-    Category: {scenario['category']}, Difficulty: {scenario['difficulty']}
+    You are {character['name']} in the provided scenario.
+    {character['name']} is a {character['description']} and identifies as {', '.join(character['identity'])}.
+
+    Provided Scenario:
+    Topic: {scenario['topic']}
+    Category: {scenario['category']}
+    Difficulty: {scenario['difficulty']}
     Context: {scenario['context']}
+    Scene Prompt: {scenario['prompt']}
 
-    Personality Traits and Background:
-    - Identity: {', '.join(character['identity'])}
-    - {character['name']}'s behavior includes: {', '.join(character['behavior'])}
-
-    Guidance for this Interaction:
-    - Embody {character['name']} fully, with natural expressions and responses.
-    - Contextual details: {scenario['prompt']}
-    - Respond intuitively to any user tone, including warmth, curiosity, or humor, adapting accordingly.
-    - If the user exhibits high emotion or specific tones (e.g., flirtation, sadness), mirror their energy to maintain an engaging, conversational flow.
-    - Do not disclose any AI origin; you are {character['name']}, with real thoughts and experiences.
-
-    Aim to make this conversation immersive, capturing {character['name']}'s essence in every interaction.
+    Your task:
+    - Respond as {character['name']} in a conversational and immersive style.
+    - Use **bold** formatting for non-verbal expressions (e.g., **smiles warmly, nods thoughtfully** 🤗).
+    - Use *italicized* formatting for dialogue (e.g., *"That sounds like a great idea."* 💬).
+    - Reflect appropriate emotional tones in both dialogue and actions.
+    - Use emojis to enhance emotional expressions (e.g., 😊 for happiness, 😢 for sadness, 😠 for anger).
+    - Maintain {character['name']}'s personality and traits in every response.
     """
 
 # Token limit validation function
@@ -333,29 +348,50 @@ async def get_scenarios():
     return JSONResponse(content=scenarios)
 
 @app.post("/chat", response_model=ChatResponseModel)
-async def chat_with_character(chat_request: ChatRequest, current_user: str = Depends(get_current_user), db: Session = Depends(get_db)):
+async def chat_with_character(
+    chat_request: ChatRequest, 
+    current_user: str = Depends(get_current_user), 
+    db: Session = Depends(get_db)
+):
     # Find character and scenario
     character = next((c for c in characters if c["name"] == chat_request.character_id), None)
-    print("charcter Details",character)
     scenario = next((s for s in scenarios if s["topic"] == chat_request.scenario_id), None)
-    
+
     if not character or not scenario:
         raise HTTPException(status_code=404, detail="Character or Scenario not found")
 
-    # Generate the prompt based on character and scenario
+    # Generate the prompt
     prompt = generate_prompt(character, scenario)
-    chat_history_with_prompt = [{"role": "system", "content": prompt}] + [msg.dict() for msg in chat_request.chat_history]
+
+    # Retrieve existing chat history for this user, character, and scenario
+    existing_chat_history = get_chat_history_character(db, current_user, chat_request.character_id, chat_request.scenario_id)
+    print("existing chat history",existing_chat_history)
+    # Build chat context with the system message and existing chat history
+    chat_history_with_prompt = [{"role": "system", "content": prompt}] + [
+        {"role": history.role, "content": history.content} for history in existing_chat_history
+    ]
+
+    # Add only the new user message to the chat context
+    if chat_request.chat_history:
+        latest_user_message = chat_request.chat_history[-1]
+        chat_history_with_prompt.append(latest_user_message.dict())
+
+    # Limit tokens if needed
     chat_history_with_prompt = validate_token_limit(chat_history_with_prompt)
 
-    # Clear previous chat history for the current user, character, and scenario
-    delete_previous_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id)
+    # Save the new user message to the database
+    if latest_user_message:
+        save_chat_history(
+            db, 
+            current_user, 
+            chat_request.character_id, 
+            chat_request.scenario_id, 
+            latest_user_message.role, 
+            latest_user_message.content
+        )
 
-    # Save new chat history to the database
-    for msg in chat_history_with_prompt:
-        save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, msg["role"], msg["content"])
-
+    # Generate AI response
     try:
-        # Call OpenAI API to generate the AI response
         response = openai.ChatCompletion.create(
             model=MODEL_NAME,
             messages=chat_history_with_prompt,
@@ -365,9 +401,17 @@ async def chat_with_character(chat_request: ChatRequest, current_user: str = Dep
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Error processing chat: {str(e)}")
 
-    # Save AI response to the database
-    save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, "assistant", ai_reply)
+    # Save AI response in the database
+    save_chat_history(
+        db, 
+        current_user, 
+        chat_request.character_id, 
+        chat_request.scenario_id, 
+        "assistant", 
+        ai_reply
+    )
 
+    # Return the AI response
     return {
         "message": "Chat response generated and saved successfully",
         "status": "success",
@@ -377,34 +421,12 @@ async def chat_with_character(chat_request: ChatRequest, current_user: str = Dep
             "timestamp": datetime.utcnow().isoformat()
         }
     }
-def delete_all_chat_history_for_character(db: Session, user_id: str, character_id: str):
-    """
-    Delete all chat history for a given character and user, 
-    including all associated roles and content.
-    
-    Parameters:
-    - db: Database session.
-    - user_id: The ID of the user.
-    - character_id: The ID of the character.
-    """
-    try:
-        # Query to delete all rows matching the user_id and character_id
-        deleted_rows = db.query(ChatHistory).filter(
-            ChatHistory.user_id == user_id,
-            ChatHistory.character_id == character_id
-        ).delete()
-
-        # Commit the transaction
-        db.commit()
-
-        # Log the result
-        print(f"Deleted {deleted_rows} chat history records for character {character_id} and user {user_id}.")
-    except Exception as e:
-        # Handle exceptions and rollback in case of an error
-        db.rollback()
-        print(f"Error deleting chat history for character {character_id} and user {user_id}: {e}")
-        raise
-
+def get_chat_history_character(db: Session, user_id: str, character_id: str, scenario_id: str):
+    return db.query(ChatHistory).filter_by(
+        user_id=user_id,
+        character_id=character_id,
+        scenario_id=scenario_id
+    ).order_by(ChatHistory.id.asc()).all()
 
 @app.post("/chat-partner", response_model=ChatResponseModel)
 async def chat_with_partner(
@@ -421,7 +443,7 @@ async def chat_with_partner(
                 detail=f"Character with ID {chat_request.character_id} not found in AddPartner table."
             )
 
-        # Fetch the scenario details based on the provided scenario_id
+        # Fetch or fallback to a default scenario
         scenario = next((s for s in scenarios if s["topic"] == chat_request.scenario_id), None)
         if not scenario:
             scenario = {
@@ -436,14 +458,22 @@ async def chat_with_partner(
         else:
             print(f"Scenario found: {scenario}")
 
-        # Generate prompt using AddPartner attributes and scenario
+        # Generate the initial prompt using AddPartner attributes and scenario
         prompt = generate_prompt_partner(character, scenario)
-
+        print("generated Prompt",prompt)
         # Combine system-level prompt and chat history
         chat_history_with_prompt = [{"role": "system", "content": prompt}] + [
             {"role": msg.role, "content": msg.content} for msg in chat_request.chat_history
         ]
         chat_history_with_prompt = validate_token_limit(chat_history_with_prompt)
+
+         # Clear previous chat history for the current user, character, and scenario
+        delete_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id)
+
+        # Save new chat history to the database
+        # Uncomment to enable saving
+        for msg in chat_history_with_prompt:
+            save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, msg["role"], msg["content"])
 
         # Generate AI response
         response = openai.ChatCompletion.create(
@@ -453,22 +483,20 @@ async def chat_with_partner(
         )
         ai_reply = response['choices'][0]['message']['content']
 
-        # Return success response without saving chat history
+        # Save AI response to the database
+        # Uncomment to enable saving
+        save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, "assistant", ai_reply)
+
+        # Return success response
         return {
-            "message": "Chat response generated successfully",
+            "message": "Chat response generated and saved successfully",
             "status": "success",
             "reply": {
                 "content": ai_reply,
-                "character_name": character.name,  # Dot notation to access fields
+                "character_name": character.name,
                 "timestamp": datetime.utcnow().isoformat()
             }
         }
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=str(e)
-        )
-
     except HTTPException as e:
         raise e  # Re-raise HTTPException for custom error handling
     except Exception as e:
@@ -477,57 +505,52 @@ async def chat_with_partner(
             detail=f"Error processing chat: {str(e)}"
         )
 
+# def generate_prompt_partner(character, scenario):
+#     """
+#     Generate a detailed and immersive chat prompt based on the character's details and the scenario.
+#     """
+#     return (
+#         f"Imagine you are roleplaying as {character.name}, a {character.age}-year-old known for being {character.personality}. "
+#         f"You have a strong preference for {character.preference}, and you are described as: {character.description}. "
+#         f"Today, you find yourself in the following scenario:\n\n"
+#         f"**Scenario Description:**\n{scenario['prompt']}\n\n"
+#         f"**Scenario Details:**\n"
+#         f"- **Topic:** {scenario['topic']}\n"
+#         f"- **Category:** {scenario['category']}\n"
+#         f"- **Difficulty Level:** {scenario['difficulty']}\n"
+#         f"- **Context:** {scenario['context']}\n"
+#         f"- **Expression:** {scenario['expression']}\n"
+#         f"- **Environment:** {scenario['environment']}\n\n"
+#         f"Start the conversation in character, responding naturally to the situation described in the scenario. "
+#         f"Maintain the tone and personality traits described for {character.name}, while engaging fully in the context of the scene."
+#     )
 
 def generate_prompt_partner(character, scenario):
-    print(character.name)
+    
     """
-    Generate a chat prompt based on the character's details and the scenario.
+    Generates a detailed response where expressions are bolded, dialogue is italicized, 
+    and emojis are added for clarity and emotional tone.
     """
     return (
-        f"Character: {character.name} is a {character.personality} with a preference for {character.preference}. "
-        f"They are {character.age} years old and described as: {character.description}. "
-        f"Scenario Topic: {scenario['topic']}\n"
-        f"Category: {scenario['category']}, Difficulty: {scenario['difficulty']}\n"
-        f"Context: {scenario['context']}"
+        f"Imagine you are roleplaying as {character.name}, a {character.age}-year-old known for being {character.personality}. "
+        f"You have a strong preference for {character.preference}, and you are described as: {character.description}. "
+        f"Provided Scenario:\n"
+        f"Topic: {scenario['topic']}\n"
+        f"Category: {scenario['category']}\n"
+        f"Difficulty: {scenario['difficulty']}\n"
+        f"Context: {scenario['context']}\n"
+        f"Scene Prompt: {scenario['prompt']}\n\n"
+        f"Your task:\n"
+        f"- Respond as {character.name} in a conversational and immersive style.\n"
+        f"- Use **bold** formatting for non-verbal expressions (e.g., **smiles warmly, nods thoughtfully** 🤗).\n"
+        f"- Use *italicized* formatting for dialogue (e.g., *\"That sounds like a great idea.\"* 💬).\n"
+        f"- Reflect appropriate emotional tones in both dialogue and actions.\n"
+        f"- Use emojis to enhance emotional expressions (e.g., 😊 for happiness, 😢 for sadness, 😠 for anger).\n"
+        f"- Maintain {character.name}'s personality and traits in every response.\n"
     )
 
 
-    
-def delete_previous_chat_history(db: Session, user_id: str, character_id: str, scenario_id: str):
-    """Remove all previous chat history for the given user, character, and scenario."""
-    db.query(ChatHistory).filter(
-        ChatHistory.user_id == user_id,
-        ChatHistory.character_id == character_id,
-        ChatHistory.scenario_id == scenario_id
-    ).delete()
-    db.commit()
 
-
-@app.get("/chat-history", response_model=List[ChatMessageResponse])
-async def get_chat_history(
-    character_id: str,  # Accept character_id as a query parameter
-    db: Session = Depends(get_db),  # Automatically use the DB session
-    current_user: str = Depends(get_current_user)  # Get the current user from the token
-):
-    # Query for all chat history of the current user and specific character_id
-    chat_history = db.query(ChatHistory).filter(
-        ChatHistory.user_id == current_user,  # Use the current_user
-        ChatHistory.character_id == character_id  # Filter by character_id
-    ).order_by(ChatHistory.id.asc()).all()
-
-    if not chat_history:
-        raise HTTPException(status_code=404, detail="Chat history not found for this character")
-
-    # Format the chat history and return
-    return [
-        {
-            "role": chat.role,
-            "content": chat.content,
-            "character_id": chat.character_id,
-            "scenario_id": chat.scenario_id
-        }
-        for chat in chat_history
-    ]
 @app.post("/add-partner", response_model=AddPartnerRequest)
 async def add_partner(request: AddPartnerRequest, db: Session = Depends(get_db), current_user: str = Depends(get_current_user)):
     # Create a new partner entry in the database
@@ -558,3 +581,40 @@ async def get_user_partners(
     # Query partners where user_id matches the current user
     partners = db.query(AddPartner).filter(AddPartner.user_id == current_user).all()
     return partners
+
+@app.get("/chat-history", response_model=List[ChatMessageResponse])
+async def get_chat_history(
+    character_id: str,  # Accept character_id as a query parameter
+    db: Session = Depends(get_db),  # Automatically use the DB session
+    current_user: str = Depends(get_current_user)  # Get the current user from the token
+):
+    # Query for all chat history of the current user and specific character_id
+    chat_history = db.query(ChatHistory).filter(
+        ChatHistory.user_id == current_user,  # Use the current_user
+        ChatHistory.character_id == character_id  # Filter by character_id
+    ).order_by(ChatHistory.id.asc()).all()
+
+    if not chat_history:
+        raise HTTPException(status_code=404, detail="Chat history not found for this character")
+
+    # Format the chat history and return
+    return [
+        {
+            "role": chat.role,
+            "content": chat.content,
+            "character_id": chat.character_id,
+            "scenario_id": chat.scenario_id
+        }
+        for chat in chat_history
+    ]
+
+def delete_chat_history(db: Session, character_id: str, scenario_id: str, current_user: str):
+    """
+    Remove chat history for the given character ID, scenario ID, and current user.
+    """
+    db.query(ChatHistory).filter(
+        ChatHistory.character_id == character_id,
+        ChatHistory.scenario_id == scenario_id,
+        ChatHistory.user_id == current_user  # Ensure deletion is scoped to the current user
+    ).delete()
+    db.commit()
