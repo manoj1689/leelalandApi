@@ -2,7 +2,7 @@
   "scenarios": [
     {
       "id": 1,
-      "topic": "Leena's Package",
+      "topic": "Leena`s Package",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A warm kitchen setting where a delivery exchange turns into a casual conversation.",
@@ -28,7 +28,7 @@
     },
     {
       "id": 3,
-      "topic": "Teacher's Discussion",
+      "topic": "Teacher`s Discussion",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A teacher discusses a student's poor performance in a recent exam, considering a call to the parents.",
@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "topic": "Husband's Absence",
+      "topic": "Husband`s Absence",
       "category": "Romantic",
       "difficulty": "Medium",
       "context": "A casual conversation turns flirty when a young man visits in the absence of your partner.",
@@ -93,7 +93,7 @@
     },
     {
       "id": 8,
-      "topic": "Boss's Room",
+      "topic": "Boss`s Room",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A work trip brings an unexpected closeness between you and your boss.",

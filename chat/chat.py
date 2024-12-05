@@ -48,7 +48,8 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 # OpenAI API setup
-openai.api_base = "http://43.248.241.252:1234/v1"
+# openai.api_base = "http://43.248.241.252:1234/v1"
+openai.api_base = "http://43.248.241.252:8000/v1"
 openai.api_key = "lm-studio"
 MODEL_NAME = "Publisher/Repository"
 MAX_TOKENS = 2048  # Set max token count for chat history
@@ -279,7 +280,7 @@ async def load_data():
 def generate_prompt(character, scenario):
     """
     Generates a detailed response where expressions are bolded, dialogue is italicized, 
-    and emojis are added for clarity and emotional tone.
+    and emojis are added for clarity and emotional tone and short reply.
     """
     return f"""
     You are {character['name']} in the provided scenario.
@@ -421,6 +422,8 @@ async def chat_with_character(
             "timestamp": datetime.utcnow().isoformat()
         }
     }
+
+
 def get_chat_history_character(db: Session, user_id: str, character_id: str, scenario_id: str):
     return db.query(ChatHistory).filter_by(
         user_id=user_id,
@@ -460,49 +463,90 @@ async def chat_with_partner(
 
         # Generate the initial prompt using AddPartner attributes and scenario
         prompt = generate_prompt_partner(character, scenario)
-        print("generated Prompt",prompt)
-        # Combine system-level prompt and chat history
+        print("Generated Prompt:", prompt)
+
+        # Retrieve existing chat history for this user, character, and scenario
+       # Retrieve existing chat history for this user, character, and scenario
+        existing_chat_history = get_chat_history_character(
+            db, current_user, chat_request.character_id, chat_request.scenario_id
+        )
+        print("Existing Chat History:", existing_chat_history)
+
+        # Check if the scenario has changed
+        if existing_chat_history and existing_chat_history[0].scenario_id != chat_request.scenario_id:
+            # Clear chat history for this character if the scenario has changed
+            delete_chat_history(db, current_user, chat_request.character_id)
+            existing_chat_history = []  # Reset the chat history
+            print(f"Chat history cleared for character {chat_request.character_id} due to scenario change.")
+
+
+        # Build chat context with the system message and existing chat history
         chat_history_with_prompt = [{"role": "system", "content": prompt}] + [
-            {"role": msg.role, "content": msg.content} for msg in chat_request.chat_history
+            {"role": history.role, "content": history.content} for history in existing_chat_history
         ]
+
+        # Add only the new user message to the chat context
+        latest_user_message = None
+        if chat_request.chat_history:
+            latest_user_message = chat_request.chat_history[-1]
+            chat_history_with_prompt.append(latest_user_message.dict())
+
+        # Limit tokens if needed
         chat_history_with_prompt = validate_token_limit(chat_history_with_prompt)
 
-         # Clear previous chat history for the current user, character, and scenario
-        delete_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id)
-
-        # Save new chat history to the database
-        # Uncomment to enable saving
-        for msg in chat_history_with_prompt:
-            save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, msg["role"], msg["content"])
+        # Save the new user message to the database
+        if latest_user_message:
+            save_chat_history(
+                db,
+                current_user,
+                chat_request.character_id,
+                chat_request.scenario_id,
+                latest_user_message.role,
+                latest_user_message.content
+            )
 
         # Generate AI response
-        response = openai.ChatCompletion.create(
-            model=MODEL_NAME,
-            messages=chat_history_with_prompt,
-            temperature=chat_request.temperature
+        try:
+            response = openai.ChatCompletion.create(
+                model=MODEL_NAME,
+                messages=chat_history_with_prompt,
+                temperature=chat_request.temperature
+            )
+            ai_reply = response['choices'][0]['message']['content']
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Error processing chat: {str(e)}"
+            )
+
+        # Save AI response in the database
+        save_chat_history(
+            db,
+            current_user,
+            chat_request.character_id,
+            chat_request.scenario_id,
+            "assistant",
+            ai_reply
         )
-        ai_reply = response['choices'][0]['message']['content']
 
-        # Save AI response to the database
-        # Uncomment to enable saving
-        save_chat_history(db, current_user, chat_request.character_id, chat_request.scenario_id, "assistant", ai_reply)
-
-        # Return success response
+        # Return the AI response
         return {
             "message": "Chat response generated and saved successfully",
             "status": "success",
             "reply": {
                 "content": ai_reply,
-                "character_name": character.name,
+                "character_name": character.name,  # Updated to match the object attribute
                 "timestamp": datetime.utcnow().isoformat()
             }
         }
-    except HTTPException as e:
-        raise e  # Re-raise HTTPException for custom error handling
+    except HTTPException as http_error:
+        # Rethrow HTTP exceptions
+        raise http_error
     except Exception as e:
+        # Catch any unexpected errors
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error processing chat: {str(e)}"
+            detail=f"An unexpected error occurred: {str(e)}"
         )
 
 # def generate_prompt_partner(character, scenario):
@@ -526,29 +570,24 @@ async def chat_with_partner(
 #     )
 
 def generate_prompt_partner(character, scenario):
-    
-    """
-    Generates a detailed response where expressions are bolded, dialogue is italicized, 
-    and emojis are added for clarity and emotional tone.
-    """
     return (
-        f"Imagine you are roleplaying as {character.name}, a {character.age}-year-old known for being {character.personality}. "
-        f"You have a strong preference for {character.preference}, and you are described as: {character.description}. "
-        f"Provided Scenario:\n"
-        f"Topic: {scenario['topic']}\n"
-        f"Category: {scenario['category']}\n"
-        f"Difficulty: {scenario['difficulty']}\n"
-        f"Context: {scenario['context']}\n"
-        f"Scene Prompt: {scenario['prompt']}\n\n"
-        f"Your task:\n"
-        f"- Respond as {character.name} in a conversational and immersive style.\n"
-        f"- Use **bold** formatting for non-verbal expressions (e.g., **smiles warmly, nods thoughtfully** 🤗).\n"
-        f"- Use *italicized* formatting for dialogue (e.g., *\"That sounds like a great idea.\"* 💬).\n"
-        f"- Reflect appropriate emotional tones in both dialogue and actions.\n"
-        f"- Use emojis to enhance emotional expressions (e.g., 😊 for happiness, 😢 for sadness, 😠 for anger).\n"
-        f"- Maintain {character.name}'s personality and traits in every response.\n"
+        f"Imagine you are roleplaying as **{character.name}**, a {character.age}-year-old known for being "
+        f"{character.personality}. You have a strong preference for {character.preference}, and you are described as: "
+        f"{character.description}.\n\n"
+        f"Scenario Information:\n"
+        f"- **Topic**: {scenario['topic']}\n"
+        f"- **Category**: {scenario['category']}\n"
+        f"- **Difficulty**: {scenario['difficulty']}\n"
+        f"- **Context**: {scenario['context']}\n"
+        f"- **Scene Prompt**: {scenario['prompt']}\n\n"
+        f"Your Task:\n"
+        f"1. Always respond as **{character.name}** in the following structured format:\n"
+        f"   - Dialogue: Enclose in double quotes and include emojis to reflect emotional tone (e.g., \"That sounds amazing! 😊\").\n"
+        f"   - Non-verbal Actions: Enclose in asterisks (\*) and describe actions with appropriate emojis (e.g., *nods thoughtfully 💭*).\n"
+        f"   - Surroundings: Combine descriptions of the environment with the character's actions to create an immersive response (e.g., *glances out the window as sunlight streams through, casting a golden glow across the room 🌅*).\n"
+        f"2. Describe the surroundings in a way that grounds the response in the scene.\n"
+        f"3. Maintain consistency in structure for every response."
     )
-
 
 
 @app.post("/add-partner", response_model=AddPartnerRequest)
