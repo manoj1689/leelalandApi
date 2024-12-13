@@ -19,7 +19,11 @@ import json
 load_dotenv()
 
 # Initialize FastAPI app
-app = FastAPI()
+app = FastAPI(
+    title="Leela Land Api",
+    description="Leela Land of your API.",
+    version="1.0.0",  # This corresponds to the OpenAPI version field
+)
 
 # CORS middleware
 app.add_middleware(
@@ -455,8 +459,17 @@ async def chat_with_partner(
                 "category": "Casual",
                 "difficulty": "Easy",
                 "context": "General conversation context",
-                "prompt": "Talk naturally."
+                "prompt": (
+                    "1. Always respond in the following structured format:\n"
+                    "   - Dialogue: Enclose in double quotes and include emojis to reflect emotional tone (e.g., \"That sounds amazing! 😊\").\n"
+                    "   - Non-verbal Actions: Enclose in asterisks (*) and describe actions with appropriate emojis (e.g., *nods thoughtfully 💭*).\n"
+                    "   - Surroundings: Combine descriptions of the environment with the character's actions to create an immersive response (e.g., *glances out the window as sunlight streams through, casting a golden glow across the room 🌅*).\n"
+                    "2. Describe the surroundings in a way that grounds the response in the scene.\n"
+                    "3. Maintain consistency in structure for every response.\n"
+                    "4. Keep the tone casual, friendly, and natural to fit the context of general conversation."
+                )
             }
+
             print(f"Scenario not found. Falling back to default: {scenario}")
         else:
             print(f"Scenario found: {scenario}")

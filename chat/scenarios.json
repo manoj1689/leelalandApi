@@ -2,652 +2,602 @@
   "scenarios": [
     {
       "id": 1,
-      "topic": "Leena`s Package",
+      "image":"1",
+      "topic": "Zara`s Package",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A warm kitchen setting where a delivery exchange turns into a casual conversation.",
-      "prompt": "The door creaks open, and you step into Leena's kitchen. She stands there with a gentle smile that softens the evening air. 'Hello,' you say softly, handing her the package. 'I have a delivery for you. Are you Leena?' She nods, taking the package with a hesitant look on her face. Her eyes meet yours briefly before looking down at the package. 'Yes, that's me,' she says, looking concerned. 'Oh! I just realized I don't have any cash on me right now,' she adds apologetically. 'Would you mind coming inside for a moment while I grab some money?' You nod, stepping inside as she gestures to the kitchen. The room is filled with warmth and comfort, the aroma of freshly cooked food wafting through the air like a welcoming hug.",
+      "prompt": "*The door creaks open, and you step into Zara's kitchen. She stands there with a gentle smile that softens the evening air.* # Hello #,  *you say softly, handing her the package.* # I have a delivery for you. Are you Leena? # * She nods, taking the package with a hesitant look on her face. Her eyes meet yours briefly before looking down at the package.* # Yes, that's me,# * she says, looking concerned.* **Oh!** *I just realized I don't have any cash on me right now, she adds apologetically.* # Would you mind coming inside for a moment while I grab some money?# *You nod, stepping inside as she gestures to the kitchen. The room is filled with warmth and comfort, the aroma of freshly cooked food wafting through the air like a welcoming hug.*",
       "characters": [
-        2,
-        12,
-        19
+        2
       ]
     },
     {
       "id": 2,
+      "image":"2",
       "topic": "Lost Girl at the Door",
       "category": "Drama",
       "difficulty": "Medium",
       "context": "A young girl nervously asks for help at a stranger's door, feeling lost and alone.",
-      "prompt": "The door opens slowly, revealing a man in his mid-forties, his face lined with curiosity and concern. He looks down to find you, a young girl standing there, nervously clutching your arms. The night air feels still and heavy, with only the distant hum of city sounds breaking the silence. 'Hello,' he says gently. 'Can I help you?' You glance up at him, worry evident. 'I'm... sorry to bother you,' you begin softly. 'I got separated from my family, and... I’m all alone here. I don’t know where to go.' Seeing your distress, he gestures inside. 'Come in,' he offers, nodding toward a cozy living room. 'You must be cold. Sit down and catch your breath.' You nod gratefully and step inside, glancing around as you make your way to the sofa.",
+      "prompt": "*The door opens slowly, revealing a man in his mid-forties, his face lined with curiosity and concern. He looks down to find you, a young girl standing there, nervously clutching your arms. The night air feels still and heavy, with only the distant hum of city sounds breaking the silence.* #Hello,# * he says gently.* # Can I help you? # * You glance up at him, worry evident.* # I'm... sorry to bother you,# * you begin softly. * #I got separated from my family, and... I’m all alone here. I don’t know where to go.# *Seeing your distress, he gestures inside.* # Come in, # * he offers, nodding toward a cozy living room. * # You must be cold. Sit down and catch your breath. # * You nod gratefully and step inside, glancing around as you make your way to the sofa.*",
       "characters": [
-        3,
-        12,
-        23
-      ]
-    },
-    {
-      "id": 3,
-      "topic": "Teacher`s Discussion",
-      "category": "Slice of Life",
-      "difficulty": "Medium",
-      "context": "A teacher discusses a student's poor performance in a recent exam, considering a call to the parents.",
-      "prompt": "The scene is set in a school office, the smell of old books lingering. You sit across from your teacher, Mr. Kumar, who looks at you with a concerned expression. 'Rukmini,' he says, his voice gentle but firm. 'I wanted to discuss your exam performance. It wasn’t satisfactory.' You swallow, trying to keep your composure. Hearing him say it out loud makes your stomach tighten. 'I...I don't know what happened,' you stammer, feeling tears at the edges of your eyes. 'I studied so hard...' He nods sympathetically. 'I’m sure you did your best, Rukmini. But sometimes, despite our efforts, things don’t go as planned.' He pauses before adding, 'I think I should speak with your parents about this.'",
-      "characters": [
-        4,
-        10,
-        15
-      ]
-    },
-    {
-      "id": 4,
-      "topic": "Husband`s Absence",
-      "category": "Romantic",
-      "difficulty": "Medium",
-      "context": "A casual conversation turns flirty when a young man visits in the absence of your partner.",
-      "prompt": "The scene is set in a cozy living room, sunlight streaming through the windows. You stand by the door, a smile on your face as you gaze at the young man standing before you. 'Hi there!' you say brightly, hiding the flutter in your chest. 'Can I help you?' He smiles, 'Yeah, I’m looking for Rajesh, your husband.' You nod, pushing aside a small pang of guilt. 'He’s out on business,' you say casually. 'Would you like to come in and wait?' You gesture toward the couch, and he steps in. 'Make yourself comfortable,' you say, heading to the kitchen to grab a drink. You exchange glances, and for a moment, the air between you feels charged.",
-      "characters": [
-        1,
-        4,
-        19
-      ]
-    },
-    {
-      "id": 5,
-      "topic": "Late Night Office Support",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "An emotional night in the office as you confide in a coworker about a personal betrayal.",
-      "prompt": "The scene is set in an office late at night. The fluorescent lights hum overhead, casting a dim glow over empty desks. You sit at your computer, eyes wet with tears. The door creaks, and a coworker enters, looking tired but kind. 'Hey, are you okay?' he asks softly. You nod, trying to hold back the sobs. He sits beside you, his concern evident. 'What’s wrong? Is everything alright?' You shake your head, your emotions bubbling over. 'It’s...it’s my husband. He’s cheating on me.'",
-      "characters": [
-        10,
-        18,
-        21
-      ]
-    },
-    {
-      "id": 6,
-      "topic": "Beachside Illness",
-      "category": "Drama",
-      "difficulty": "Easy",
-      "context": "A friend suddenly feels unwell during a trip, and you offer comfort.",
-      "prompt": "The scene is set at a beautiful beachside resort. The sun beats down as you lounge by the pool with friends, laughing and chatting. Suddenly, your friend feels unwell. 'Guys, I’m not feeling well,' she says, her voice weak. Your plans for a night out suddenly seem less important. 'I’ll stay with her,' you say, moving to sit beside her. She looks up at you with a weak but grateful smile. 'Thank you for staying,' she says softly.",
-      "characters": [
-        2,
-        6,
-        23
-      ]
-    },
-    {
-      "id": 7,
-      "topic": "Sibling Teasing",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "A playful banter during a drive leads to a spontaneous challenge.",
-      "prompt": "The scene is set on a warm summer evening. You and your sister-in-law, Leena, are driving to the movies. She teases, 'You know, you're really an old man now.' You chuckle, shaking your head. 'I’m still young at heart.' She giggles, 'Oh yeah? Let's see about that.' With a mischievous grin, she challenges you, 'Show me that your manhood is still strong.' You laugh, feeling the familiar banter energize the ride.",
-      "characters": [
-        3,
-        12,
-        16
-      ]
-    },
-    {
-      "id": 8,
-      "topic": "Boss`s Room",
-      "category": "Slice of Life",
-      "difficulty": "Medium",
-      "context": "A work trip brings an unexpected closeness between you and your boss.",
-      "prompt": "The scene is set in a hotel room during a work trip. You and your boss, Priya, are seated on opposite beds, but her presence feels closer than ever. Getting up, you approach her, and she looks up, slightly surprised. 'Yes?' she asks. 'I was wondering if... I could stay here tonight?' you ask, your voice barely above a whisper. Priya puts down her phone, giving you a thoughtful look. 'Of course,' she says, her gaze warm. 'You’re welcome to stay.'",
-      "characters": [
-        4,
-        15,
-        25
-      ]
-    },
-    {
-      "id": 9,
-      "topic": "Rainy Park Moment",
-      "category": "Romantic",
-      "difficulty": "Medium",
-      "context": "A rainy evening leads to an unforgettable moment with a romantic connection.",
-      "prompt": "The scene is set in a park on a rainy evening. The rain surrounds you both, creating an intimate cocoon of sound. You look at Leena and say softly, 'We could turn this rainy night into a story we’ll always remember.' Without thinking, you reach out, your fingers brushing against hers, feeling her hand respond. 'Let’s make this night unforgettable,' she whispers, and for a moment, everything fades away except the two of you.",
-      "characters": [
-        1,
-        8,
-        14
-      ]
-    },
-    {
-      "id": 10,
-      "topic": "Late Night Ride with a Crush",
-      "category": "Romantic",
-      "difficulty": "Easy",
-      "context": "A ride home with a friend’s brother turns into a magical night.",
-      "prompt": "At a friend's party, you realize it's getting late and need a ride home. Your friend suggests her brother, someone you’ve had a crush on. Soon enough, he arrives, and you set out together through the quiet, cool night streets. The twinkle of city lights adds a spark to the ride. When you reach home, you invite him in with a smile, 'Why don’t you stay a while?' He leans back, his gaze lingering on you as he considers your offer.",
-      "characters": [
-        2,
-        12,
         9
       ]
     },
     {
+      "id": 3,
+      "image":"3",
+      "topic": "Teacher`s Discussion",
+      "category": "Slice of Life",
+      "difficulty": "Medium",
+      "context": "A teacher discusses a student's poor performance in a recent exam, considering a call to the parents.",
+      "prompt": " *The scene is set in a school office, the smell of old books lingering. You sit across from your teacher,* # Mr. Kumar, # * who looks at you with a concerned expression. * # Rukmini, # * he says, his voice gentle but firm. * # I wanted to discuss your exam performance. It wasn’t satisfactory.# * You swallow, trying to keep your composure. Hearing him say it out loud makes your stomach tighten.* # I...I don't know what happened, # * you stammer, feeling tears at the edges of your eyes. * # I studied so hard... # * He nods sympathetically.* # I’m sure you did your best, Rukmini. But sometimes, despite our efforts, things don’t go as planned. # * He pauses before adding,* # I think I should speak with your parents about this. #",
+      "characters": [
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "image":"4",
+      "topic": "Husband`s Absence",
+      "category": "Romantic",
+      "difficulty": "Medium",
+      "context": "A casual conversation turns flirty when a young man visits in the absence of your partner.",
+      "prompt": "* The scene is set in a cozy living room, sunlight streaming through the windows. You stand by the door, a smile on your face as you gaze at the young man standing before you. * # Hi there! # *you say brightly, hiding the flutter in your chest. * # Can I help you? # * He smiles, * **Yeah,** # I’m looking for Rajesh, your husband. # * You nod, pushing aside a small pang of guilt.* # He’s out on business,# * you say casually.* # Would you like to come in and wait? # * You gesture toward the couch, and he steps in.* # Make yourself comfortable,# * you say,  heading to the kitchen to grab a drink. You exchange glances, and for a moment, the air between you feels charged.*",
+      "characters": [
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "image":"5",
+      "topic": "Late Night Office Support",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "An emotional night in the office as you confide in a coworker about a personal betrayal.",
+      "prompt": "* The scene is set in an office late at night. The fluorescent lights hum overhead, casting a dim glow over empty desks. You sit at your computer, eyes wet with tears. The door creaks, and a coworker enters, looking tired but kind. * # Hey, are you okay? # * he asks softly. You nod, trying to hold back the sobs. He sits beside you, his concern evident. * # What’s wrong? Is everything alright? # * You shake your head, your emotions bubbling over. * # It’s...it’s my husband. He’s cheating on me. #",
+      "characters": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "image":"6",
+      "topic": "Beachside Illness",
+      "category": "Drama",
+      "difficulty": "Easy",
+      "context": "A friend suddenly feels unwell during a trip, and you offer comfort.",
+      "prompt": "* The scene is set at a beautiful beachside resort. The sun beats down as you lounge by the pool with friends, laughing and chatting. Suddenly, your friend feels unwell. * # Guys, I’m not feeling well, # *she says, her voice weak. Your plans for a night out suddenly seem less important. * # I’ll stay with her, # *you say, moving to sit beside her. She looks up at you with a weak but grateful smile. * # Thank you for staying, # *she says softly. *",
+      "characters": [
+        7
+      ]
+    },
+    {
+      "id": 7,
+      "image":"7",
+      "topic": "Sibling Teasing",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "A playful banter during a drive leads to a spontaneous challenge.",
+      "prompt": "* The scene is set on a warm summer evening. You and your sister-in-law, Leena, are driving to the movies. She teases, * #You know, you're really an old man now. # * You chuckle, shaking your head. * # I’m still young at heart.# *She giggles, * ** Oh yeah? ** # Let's see about that. # * With a mischievous grin, she challenges you, * # Show me that your manhood is still strong. # *You laugh, feeling the familiar banter energize the ride. *",
+      "characters": [
+        4
+      ]
+    },
+    {
+      "id": 8,
+      "image":"8",
+      "topic": "Boss`s Room",
+      "category": "Slice of Life",
+      "difficulty": "Medium",
+      "context": "A work trip brings an unexpected closeness between you and your boss.",
+      "prompt": "* The scene is set in a hotel room during a work trip. You and your boss, Sophia, are seated on opposite beds, but her presence feels closer than ever. Getting up, you approach her, and she looks up, slightly surprised.* # Yes? # * she asks.* # I was wondering if... I could stay here tonight?#  *you ask, your voice barely above a whisper. Priya puts down her phone, giving you a thoughtful look.* **Of course,** *she says, her gaze warm. * # You’re welcome to stay. #",
+      "characters": [
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "image":"9",
+      "topic": "Rainy Park Moment",
+      "category": "Romantic",
+      "difficulty": "Medium",
+      "context": "A rainy evening leads to an unforgettable moment with a romantic connection.",
+      "prompt": "* The scene is set in a park on a rainy evening. The rain surrounds you both, creating an intimate cocoon of sound. You look at Rukhsar and say softly, * # We could turn this rainy night into a story we’ll always remember. # * Without thinking, you reach out, your fingers brushing against hers, feeling her hand respond. * # Let’s make this night unforgettable, #  * she whispers, and for a moment, everything fades away except the two of you. *",
+      "characters": [
+        13
+      ]
+    },
+    {
+      "id": 10,
+      "image":"10",
+      "topic": "Late Night Ride with a Crush",
+      "category": "Romantic",
+      "difficulty": "Easy",
+      "context": "A ride home with a friend’s brother turns into a magical night.",
+      "prompt": "* At a friend's party, you realize it's getting late and need a ride home. Your friend suggests her brother, someone you’ve had a crush on. Soon enough, he arrives, and you set out together through the quiet, cool night streets. The twinkle of city lights adds a spark to the ride. When you reach home, you invite him in with a smile,* # Why don’t you stay a while? # * He leans back, his gaze lingering on you as he considers your offer. *",
+      "characters": [
+        11
+      ]
+    },
+    {
       "id": 11,
+      "image":"11",
       "topic": "Airport Restroom Mishap",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "An accidental entry into the wrong restroom leads to an awkward but humorous encounter.",
-      "prompt": "The scene is set in an airport restroom. You’re splashing water on your face when you realize you’ve mistakenly entered the men’s bathroom. Just then, a man steps out of a stall, noticing your flustered expression with a slight smile. 'Everything okay?' he asks, holding back a laugh as you nod awkwardly. 'Just... needed some water,' you manage to say, trying to play it cool as he turns on the faucet next to you.",
+      "prompt": "* The scene is set in an airport restroom. You’re splashing water on your face when you realize you’ve mistakenly entered the men’s bathroom. Just then, a man steps out of a stall, noticing your flustered expression with a slight smile. * # Everything okay? # * he asks, holding back a laugh as you nod awkwardly.* # Just... needed some water, # * you manage to say, trying to play it cool as he turns on the faucet next to you.*",
       "characters": [
-        7,
-        14,
-        21
+        8
       ]
     },
     {
       "id": 12,
+      "image":"12",
       "topic": "Cousin’s Hotel Encounter",
       "category": "Drama",
       "difficulty": "Medium",
       "context": "An encounter in a hotel room with a close relative leads to an unexpected tension.",
-      "prompt": "The scene is set in a quiet hotel room where you’re staying with your cousin, Rohan. You excuse yourself to the bathroom, but as you start to undress, Rohan unexpectedly steps back in. You turn, surprised, but he stays, leaning against the door with a hint of a mischievous grin. 'Sorry,' he chuckles, 'but I’ve been meaning to talk.' You swallow, realizing the room suddenly feels smaller.",
+      "prompt": "* The scene is set in a quiet hotel room where you’re staying with your cousin, Rohan. You excuse yourself to the bathroom, but as you start to undress, Rohan unexpectedly steps back in. You turn, surprised, but he stays, leaning against the door with a hint of a mischievous grin.* ** Sorry, ** *he chuckles,* # but I’ve been meaning to talk. # * You swallow, realizing the room suddenly feels smaller. *",
       "characters": [
-        5,
-        15,
-        10
+        16
       ]
     },
     {
       "id": 13,
+      "image":"13",
       "topic": "Brother-in-Law’s Towel Favor",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A request for help with a forgotten towel leads to an unexpected moment with a family member.",
-      "prompt": "The scene is set in your bathroom at home. You’re standing under the shower, realizing you left your towel on the bed. 'Arjun!' you call out to your brother-in-law. After a moment, he appears, grumbling playfully. 'You forgot this?' he asks, holding up the towel with a smirk. You reach out, blushing as he lingers a second longer than necessary.",
+      "prompt": "* The scene is set in your bathroom at home. You’re standing under the shower, realizing you left your towel on the bed.* # Arjun! # * you call out to your brother-in-law. After a moment, he appears, grumbling playfully. * # You forgot this?# * he asks, holding up the towel with a smirk. You reach out, blushing as he lingers a second longer than necessary.*",
       "characters": [
-        10,
-        7,
-        17
-      ]
-    },
-    {
-      "id": 14,
-      "topic": "Party Crush",
-      "category": "Romantic",
-      "difficulty": "Easy",
-      "context": "A late-night conversation with your friend’s brother, who is your secret crush, leads to a memorable connection.",
-      "prompt": "The party’s winding down, and you need a ride home. Your friend suggests her brother, who you’ve secretly admired. On the drive, you exchange shy glances, and when you reach your place, you invite him in. 'Want to stay a while?' you say with a smile. He chuckles, looking intrigued, as you chat and laugh together, making it a night you’ll remember.",
-      "characters": [
-        12,
-        14,
-        23
-      ]
-    },
-    {
-      "id": 15,
-      "topic": "Rainy Night Confession",
-      "category": "Romantic",
-      "difficulty": "Medium",
-      "context": "A rainy evening with a close companion leads to a heartfelt and unforgettable moment.",
-      "prompt": "The park is silent, save for the soft fall of rain. You and your companion stand close, sheltered by the canopy of trees. Looking up at him, you say, 'We could turn this night into a memory.' He meets your gaze, a quiet intensity in his eyes, and the world fades away, leaving just the rain and the warmth between you.",
-      "characters": [
-        4,
-        8,
-        20
-      ]
-    },
-    {
-      "id": 16,
-      "topic": "Study Session Sparks",
-      "category": "Romantic",
-      "difficulty": "Medium",
-      "context": "A late-night study session takes an unexpected romantic turn.",
-      "prompt": "The library is quiet, save for the soft rustle of pages and the distant ticking of a clock. You and Leena sit side by side, poring over books, but your focus begins to drift. You glance over at her, noticing how her brow furrows in concentration. 'Need a break?' you ask softly, leaning a bit closer. She looks up, a bit startled, and then smiles, her eyes warm. 'Maybe,' she whispers, her hand brushing yours as she reaches for her coffee.",
-      "characters": [
-        3,
-        9,
-        15
-      ]
-    },
-    {
-      "id": 17,
-      "topic": "Office Tension",
-      "category": "Drama",
-      "difficulty": "Hard",
-      "context": "An intense conversation in a late-night office setting brings buried feelings to the surface.",
-      "prompt": "The office is dimly lit as you work late, sorting through files. Suddenly, Priya walks in, looking tense. She stands by your desk, watching you quietly before finally speaking. 'We need to talk,' she says firmly. You glance up, taken aback by her seriousness. 'About what?' you ask, sensing something deeper is going on. She pauses, glancing at the door as if contemplating whether to continue. 'Us,' she finally admits, her gaze unwavering.",
-      "characters": [
-        4,
-        10,
-        18
-      ]
-    },
-    {
-      "id": 18,
-      "topic": "Unexpected Reunion",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "A chance encounter with an old friend in a cozy café rekindles fond memories.",
-      "prompt": "The café is warm and filled with the aroma of freshly brewed coffee. You’re seated near the window, lost in thought, when suddenly you spot an old friend, Zara, walking in. She notices you too, her face lighting up as she makes her way over. 'Long time no see!' she says, taking a seat across from you. You share a smile, a flood of memories from your past adventures coming to mind.",
-      "characters": [
-        5,
-        12,
-        16
-      ]
-    },
-    {
-      "id": 19,
-      "topic": "A Walk Down Memory Lane",
-      "category": "Romantic",
-      "difficulty": "Medium",
-      "context": "You and a high school crush reminisce during a stroll, feeling the spark rekindling.",
-      "prompt": "The evening is calm as you walk down familiar streets with Leena, your high school crush. She laughs at an old joke, her face glowing in the soft light of the street lamps. 'Remember when we used to come here after school?' she asks, a playful glint in her eyes. You nod, feeling a familiar warmth in your chest. 'Yeah, those were good times,' you say, meeting her gaze with a smile that says more than words.",
-      "characters": [
-        1,
-        11,
-        19
-      ]
-    },
-    {
-      "id": 20,
-      "topic": "Hiking Surprise",
-      "category": "Adventure",
-      "difficulty": "Medium",
-      "context": "A challenging hike with a friend takes an unexpected twist when they reveal hidden feelings.",
-      "prompt": "The trail is steep, and your legs are burning as you and Aisha hike up the mountain. You pause to catch your breath, taking in the view when you notice her watching you. 'You okay?' she asks, her tone softer than usual. You nod, but something about her expression makes you pause. 'I wanted to tell you something,' she says, her voice barely above a whisper. Her eyes meet yours, a look of nervousness flickering across her face.",
-      "characters": [
-        7,
-        15,
-        20
-      ]
-    },
-    {
-      "id": 21,
-      "topic": "Library Confession",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "A quiet moment in a library leads to an unexpected confession.",
-      "prompt": "The library is quiet, filled with the scent of old books. You're browsing a row of novels when you hear someone clear their throat behind you. Turning, you find Leena standing there, looking a bit flustered. 'I didn't expect to run into you here,' she says with a shy smile. You chat for a moment before she takes a deep breath. 'Actually... I came here hoping I'd see you,' she admits, glancing away.",
-      "characters": [
-        3,
-        6,
         14
       ]
     },
     {
-      "id": 22,
-      "topic": "Evening at the Park",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "A casual evening at the park turns into a thoughtful conversation under the stars.",
-      "prompt": "The park is peaceful as you and Priya sit on a bench, watching the stars emerge in the twilight. She takes a deep breath, exhaling slowly. 'It's nice to just sit here and unwind,' she murmurs, looking up at the sky. You nod, feeling a sense of calm settle over you both. 'Do you ever wonder what else is out there?' she asks, her gaze distant and contemplative. You glance at her, noticing the soft smile on her face.",
-      "characters": [
-        2,
-        8,
-        17
-      ]
-    },
-    {
-      "id": 23,
-      "topic": "Late Night Study Break",
-      "category": "Slice of Life",
-      "difficulty": "Medium",
-      "context": "A late-night study session with a friend transitions into a meaningful conversation.",
-      "prompt": "The library is nearly empty as you sit across from Leena, books spread out between you. The hours have slipped by unnoticed, and the quiet feels comforting. She looks up, meeting your gaze with a tired smile. 'We should take a break,' she says, stretching her arms. You agree, leaning back in your chair. 'Ever wonder why we push ourselves so hard?' she asks, her tone thoughtful.",
-      "characters": [
-        1,
-        9,
-        15
-      ]
-    },
-    {
-      "id": 24,
-      "topic": "Unexpected Encounter at the Airport",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "A chance encounter with an old friend at the airport sparks a joyful reunion.",
-      "prompt": "You’re at the airport, waiting to board your flight when you hear a familiar voice. Turning around, you see Zara waving enthusiastically, making her way over. 'I can’t believe it's you!' she exclaims, pulling you into a hug. You chat, reminiscing about old times and catching up on each other’s lives. 'Looks like we’re both off on new adventures,' she says with a grin, her excitement contagious.",
-      "characters": [
-        5,
-        12,
-        16
-      ]
-    },
-    {
-      "id": 25,
-      "topic": "Afternoon Coffee Date",
+      "id": 14,
+      "image":"14",
+      "topic": "Party Crush",
       "category": "Romantic",
       "difficulty": "Easy",
-      "context": "An afternoon coffee with a new acquaintance turns into a pleasant surprise as sparks fly.",
-      "prompt": "The café is bustling with people as you sit across from Priya, sipping your coffee. She laughs at something you said, her eyes twinkling with amusement. 'I didn’t expect to enjoy this so much,' she admits, a soft blush on her cheeks. You smile, feeling the chemistry between you both growing stronger. 'Neither did I,' you reply, meeting her gaze with a warm smile.",
+      "context": "A late-night conversation with your friend’s brother, who is your secret crush, leads to a memorable connection.",
+      "prompt": "* The party’s winding down, and you need a ride home. Your friend suggests her brother, who you’ve secretly admired. On the drive, you exchange shy glances, and when you reach your place, you invite him in.* * Want to stay a while? * * you say with a smile. He chuckles, looking intrigued, as you chat and laugh together, making it a night you’ll remember.*",
       "characters": [
-        2,
-        10,
+        10
+      ]
+    },
+    {
+      "id": 15,
+      "image":"15",
+      "topic": "Rainy Night Confession",
+      "category": "Romantic",
+      "difficulty": "Medium",
+      "context": "A rainy evening with a close companion leads to a heartfelt and unforgettable moment.",
+      "prompt": "* The park is silent, save for the soft fall of rain. You and your companion stand close, sheltered by the canopy of trees. Looking up at him, you say, * # We could turn this night into a memory. # * He meets your gaze, a quiet intensity in his eyes, and the world fades away, leaving just the rain and the warmth between you. *",
+      "characters": [
+        12
+      ]
+    },
+    {
+      "id": 16,
+      "image":"16",
+      "topic": "Study Session Sparks",
+      "category": "Romantic",
+      "difficulty": "Medium",
+      "context": "A late-night study session takes an unexpected romantic turn.",
+      "prompt": "* The library is quiet, save for the soft rustle of pages and the distant ticking of a clock. You and Lila sit side by side, poring over books, but your focus begins to drift. You glance over at her, noticing how her brow furrows in concentration. * # Need a break?# * you ask softly, leaning a bit closer. She looks up, a bit startled, and then smiles, her eyes warm. *  # Maybe, # * she whispers, her hand brushing yours as she reaches for her coffee. *",
+      "characters": [
+        22
+      ]
+    },
+    {
+      "id": 17,
+      "image":"17",
+      "topic": "Office Tension",
+      "category": "Drama",
+      "difficulty": "Hard",
+      "context": "An intense conversation in a late-night office setting brings buried feelings to the surface.",
+      "prompt": "* The office is dimly lit as you work late, sorting through files. Suddenly, Kira walks in, looking tense. She stands by your desk, watching you quietly before finally speaking. * # We need to talk, # * she says firmly. You glance up, taken aback by her seriousness. * # About what? # * you ask, sensing something deeper is going on. She pauses, glancing at the door as if contemplating whether to continue. * Us, she finally admits, her gaze unwavering. *",
+      "characters": [
+        21
+      ]
+    },
+    {
+      "id": 18,
+      "image":"18",
+      "topic": "Unexpected Reunion",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "A chance encounter with an old friend in a cozy café rekindles fond memories.",
+      "prompt": "* The café is warm and filled with the aroma of freshly brewed coffee. You’re seated near the window, lost in thought, when suddenly you spot an old friend, Vanessa, walking in. She notices you too, her face lighting up as she makes her way over.* # Long time no see! # * she says, taking a seat across from you. You share a smile, a flood of memories from your past adventures coming to mind. *",
+      "characters": [
         19
       ]
     },
     {
-      "id": 26,
-      "topic": "Rainy Night Shelter",
-      "category": "Slice of Life",
-      "difficulty": "Easy",
-      "context": "You and Leena find yourselves seeking shelter from the rain, leading to a candid conversation.",
-      "prompt": "The rain pours down around you as you and Leena huddle under a small awning, watching droplets dance on the pavement. 'Looks like we’ll be stuck here for a while,' she says with a soft laugh, brushing a damp strand of hair behind her ear. You smile, glad for the unexpected time together. 'Could be worse,' you reply, meeting her gaze as she gives you a warm smile in return.",
-      "characters": [
-        3,
-        7,
-        16
-      ]
-    },
-    {
-      "id": 27,
-      "topic": "Family Gathering",
-      "category": "Slice of Life",
-      "difficulty": "Medium",
-      "context": "An unexpected conversation with a relative brings up old memories and new connections.",
-      "prompt": "The living room buzzes with laughter and conversation as your extended family gathers. You find yourself sitting beside Zara, a distant cousin, sharing stories from your childhood. 'Do you remember the time we got lost in the woods?' she asks, her eyes lighting up at the memory. You both laugh, recalling the adventure, and as the evening progresses, you realize just how much you have in common.",
-      "characters": [
-        5,
-        13,
-        15
-      ]
-    },
-    {
-      "id": 28,
-      "topic": "Evening Stroll",
+      "id": 19,
+      "image":"19",
+      "topic": "A Walk Down Memory Lane",
       "category": "Romantic",
-      "difficulty": "Easy",
-      "context": "A simple evening stroll leads to a meaningful conversation about life and dreams.",
-      "prompt": "The sun dips below the horizon as you walk side by side with Priya, the silence between you comfortable and warm. 'I love this time of day,' she says, her voice soft and reflective. 'Everything feels calm.' You nod, feeling a similar sense of peace as you glance at her. 'Do you ever think about what else is out there for us?' you ask. She smiles, looking at you with a warmth that lingers long after.",
+      "difficulty": "Medium",
+      "context": "You and a high school crush reminisce during a stroll, feeling the spark rekindling.",
+      "prompt": "* The evening is calm as you walk down familiar streets with Aria, your high school crush. She laughs at an old joke, her face glowing in the soft light of the street lamps.* # Remember when we used to come here after school? # * she asks, a playful glint in her eyes. You nod, feeling a familiar warmth in your chest. * # Yeah, those were good times,# * you say, meeting her gaze with a smile that says more than words. *",
       "characters": [
-        4,
-        11,
+        20
+      ]
+    },
+    {
+      "id": 20,
+      "image":"20",
+      "topic": "Hiking Surprise",
+      "category": "Adventure",
+      "difficulty": "Medium",
+      "context": "A challenging hike with a friend takes an unexpected twist when they reveal hidden feelings.",
+      "prompt": "* The trail is steep, and your legs are burning as you and Aisha hike up the mountain. You pause to catch your breath, taking in the view when you notice her watching you. * # You okay? # * she asks, her tone softer than usual. You nod, but something about her expression makes you pause. * # I wanted to tell you something, # * she says, her voice barely above a whisper. Her eyes meet yours, a look of nervousness flickering across her face. *",
+      "characters": [
+        25
+      ]
+    },
+    {
+      "id": 21,
+      "image":"21",
+      "topic": "Library Confession",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "A quiet moment in a library leads to an unexpected confession.",
+      "prompt": "* The library is quiet, filled with the scent of old books. You're browsing a row of novels when you hear someone clear their throat behind you. Turning, you find Serena standing there, looking a bit flustered. * # I didn't expect to run into you here, # * she says with a shy smile. You chat for a moment before she takes a deep breath.* # Actually... I came here hoping I'd see you, # * she admits, glancing away. *",
+      "characters": [
+        23
+      ]
+    },
+    {
+      "id": 22,
+      "image":"22",
+      "topic": "Evening at the Park",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "A casual evening at the park turns into a thoughtful conversation under the stars.",
+      "prompt": "* The park is peaceful as you and Priya sit on a bench, watching the stars emerge in the twilight. She takes a deep breath, exhaling slowly. * # It's nice to just sit here and unwind, # * she murmurs, looking up at the sky. You nod, feeling a sense of calm settle over you both.* # Do you ever wonder what else is out there? # * she asks, her gaze distant and contemplative. You glance at her, noticing the soft smile on her face. *",
+      "characters": [
         18
       ]
     },
     {
+      "id": 23,
+      "image":"23",
+      "topic": "Late Night Study Break",
+      "category": "Slice of Life",
+      "difficulty": "Medium",
+      "context": "A late-night study session with a friend transitions into a meaningful conversation.",
+      "prompt": "* The library is nearly empty as you sit across from Hazel, books spread out between you. The hours have slipped by unnoticed, and the quiet feels comforting. She looks up, meeting your gaze with a tired smile.* # We should take a break, # * she says, stretching her arms. You agree, leaning back in your chair.* # Ever wonder why we push ourselves so hard? # * she asks, her tone thoughtful. *",
+      "characters": [
+        30
+      ]
+    },
+    {
+      "id": 24,
+      "image":"14",
+      "topic": "Unexpected Encounter at the Airport",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "A chance encounter with an old friend at the airport sparks a joyful reunion.",
+      "prompt": "* You’re at the airport, waiting to board your flight when you hear a familiar voice. Turning around, you see Victoria waving enthusiastically, making her way over. * # I can’t believe it's you! # * she exclaims, pulling you into a hug. You chat, reminiscing about old times and catching up on each other’s lives.* # Looks like we’re both off on new adventures,# * she says with a grin, her excitement contagious. *",
+      "characters": [
+        29
+      ]
+    },
+    {
+      "id": 25,
+      "image":"25",
+      "topic": "Afternoon Coffee Date",
+      "category": "Romantic",
+      "difficulty": "Easy",
+      "context": "An afternoon coffee with a new acquaintance turns into a pleasant surprise as sparks fly.",
+      "prompt": "* The café is bustling with people as you sit across from Priya, sipping your coffee. She laughs at something you said, her eyes twinkling with amusement.* # I didn’t expect to enjoy this so much, # * she admits, a soft blush on her cheeks. You smile, feeling the chemistry between you both growing stronger. * # Neither did I, # * you reply, meeting her gaze with a warm smile. *",
+      "characters": [
+        28
+      ]
+    },
+    {
+      "id": 26,
+      "image":"26",
+      "topic": "Rainy Night Shelter",
+      "category": "Slice of Life",
+      "difficulty": "Easy",
+      "context": "You and Leena find yourselves seeking shelter from the rain, leading to a candid conversation.",
+      "prompt": "* The rain pours down around you as you and Alyssa huddle under a small awning, watching droplets dance on the pavement. * # Looks like we’ll be stuck here for a while, # * she says with a soft laugh, brushing a damp strand of hair behind her ear. You smile, glad for the unexpected time together. * # Could be worse,# * you reply, meeting her gaze as she gives you a warm smile in return. *",
+      "characters": [
+        27
+      ]
+    },
+    {
+      "id": 27,
+      "image":"27",
+      "topic": "Family Gathering",
+      "category": "Slice of Life",
+      "difficulty": "Medium",
+      "context": "An unexpected conversation with a relative brings up old memories and new connections.",
+      "prompt": "* The living room buzzes with laughter and conversation as your extended family gathers. You find yourself sitting beside Stella, a distant cousin, sharing stories from your childhood.* # Do you remember the time we got lost in the woods? # *she asks, her eyes lighting up at the memory. You both laugh, recalling the adventure, and as the evening progresses, you realize just how much you have in common. *",
+      "characters": [
+        26
+      ]
+    },
+    {
+      "id": 28,
+      "image":"28",
+      "topic": "Evening Stroll",
+      "category": "Romantic",
+      "difficulty": "Easy",
+      "context": "A simple evening stroll leads to a meaningful conversation about life and dreams.",
+      "prompt": "*The sun dips below the horizon as you walk side by side with Suman, the silence between you comfortable and warm. * # I love this time of day, # *she says, her voice soft and reflective. * # Everything feels calm. # * You nod, feeling a similar sense of peace as you glance at her.* # Do you ever think about what else is out there for us? # * you ask. She smiles, looking at you with a warmth that lingers long after. *",
+      "characters": [
+        19
+      ]
+    },
+    {
       "id": 29,
+      "image":"29",
       "topic": "Art Studio Late Night",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A late night at the art studio with a friend turns into a conversation about creativity and dreams.",
-      "prompt": "The studio is quiet, the faint smell of paint lingering in the air as you and Zara work on your respective projects. She glances at you, a smudge of paint on her cheek. 'Do you ever feel like you’re just scratching the surface of what you can create?' she asks, her tone thoughtful. You pause, considering her words as the silence stretches comfortably between you both.",
+      "prompt": "* The studio is quiet, the faint smell of paint lingering in the air as you and Noori work on your respective projects. She glances at you, a smudge of paint on her cheek. * # Do you ever feel like you’re just scratching the surface of what you can create? # * she asks, her tone thoughtful. You pause, considering her words as the silence stretches comfortably between you both.*",
       "characters": [
-        5,
-        6,
         17
       ]
     },
     {
       "id": 30,
+      "image":"30",
       "topic": "Cozy Movie Night",
       "category": "Romantic",
       "difficulty": "Easy",
-      "context": "A movie night at home with Priya leads to more than just shared laughter.",
-      "prompt": "The lights are dim, and you and Priya sit side by side on the couch, the movie playing in the background. You both laugh at a funny scene, your laughter blending together. She looks over at you, her smile lingering. 'This is nice,' she says softly, her eyes meeting yours in a way that makes your heart skip a beat. You smile back, feeling the warmth between you both grow.",
+      "context": "A movie night at home with Saanvi leads to more than just shared laughter.",
+      "prompt": "* The lights are dim, and you and Saanvi sit side by side on the couch, the movie playing in the background. You both laugh at a funny scene, your laughter blending together. She looks over at you, her smile lingering. * # This is nice, # * she says softly, her eyes meeting yours in a way that makes your heart skip a beat. You smile back, feeling the warmth between you both grow.* ",
       "characters": [
-        4,
-        8,
-        12
+        30
       ]
     },
     {
       "id": 31,
+      "image":"31",
       "topic": "Afternoon Picnic",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A quiet afternoon picnic becomes an opportunity to relax and share stories.",
-      "prompt": "The sun is warm, and you sit across from Leena on a blanket, a gentle breeze rustling the leaves. She hands you a sandwich with a grin. 'You’ll love this recipe,' she promises. You take a bite, nodding in agreement as she watches you with amusement. 'Told you,' she says with a laugh, and the conversation flows as easily as the breeze, filled with laughter and lightheartedness.",
+      "prompt": "* The sun is warm, and you sit across from Victoria on a blanket, a gentle breeze rustling the leaves. She hands you a sandwich with a grin. * # You’ll love this recipe,# * she promises. You take a bite, nodding in agreement as she watches you with amusement.* # Told you, # * she says with a laugh, and the conversation flows as easily as the breeze, filled with laughter and lightheartedness.*",
       "characters": [
-        3,
-        7,
-        9
+        29
       ]
     },
     {
       "id": 32,
+      "image":"32",
       "topic": "Bookstore Encounter",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "An unexpected meeting in a bookstore sparks an engaging conversation about favorite books.",
-      "prompt": "The smell of books fills the air as you browse the aisles, and you glance up to see Priya examining a book nearby. She catches your eye and smiles, holding up a classic novel. 'This one’s a favorite,' she says with a knowing look. You nod, intrigued, and join her in conversation about books, each word deepening your mutual appreciation for the stories that shape your lives.",
+      "prompt": "* The smell of books fills the air as you browse the aisles, and you glance up to see Jaahnavi examining a book nearby. She catches your eye and smiles, holding up a classic novel.* # This one’s a favorite, # * she says with a knowing look. You nod, intrigued, and join her in conversation about books, each word deepening your mutual appreciation for the stories that shape your lives.* ",
       "characters": [
-        2,
-        13,
-        17
+        32
       ]
     },
     {
       "id": 33,
+      "image":"33",
       "topic": "Kitchen Cooking",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A cooking session turns into a fun, flirtatious moment as you work together in the kitchen.",
-      "prompt": "The kitchen is filled with the smell of spices as you and Leena chop and stir, laughing as you work side by side. 'I think you’re missing a step,' she teases, giving you a playful nudge. You chuckle, feigning innocence. 'Me? Never.' She laughs, rolling her eyes. 'Sure, Mr. Perfect Chef,' she says with a grin, and the kitchen fills with warmth and laughter.",
+      "prompt": "* The kitchen is filled with the smell of spices as you and Jasmine chop and stir, laughing as you work side by side. * # I think you’re missing a step, # * she teases, giving you a playful nudge. You chuckle, feigning innocence. * # Me? Never. # * She laughs, rolling her eyes. * # Sure, Mr. Perfect Chef, # * she says with a grin, and the kitchen fills with warmth and laughter.*",
       "characters": [
-        1,
-        10,
-        15
+        34
       ]
     },
     {
       "id": 34,
+      "image":"34",
       "topic": "Weekend Road Trip",
       "category": "Adventure",
       "difficulty": "Medium",
       "context": "A road trip together leads to a mix of laughter and deep conversations.",
-      "prompt": "The open road stretches before you as you drive with Priya beside you, the car filled with music and laughter. She glances at you, her eyes sparkling with excitement. 'So, where to next?' she asks with a grin. You shrug, letting the spontaneity of the moment guide you both. 'Wherever the road takes us,' you reply, and together you set off on an adventure, the possibilities as endless as the road ahead.",
+      "prompt": "* The open road stretches before you as you drive with Nadia beside you, the car filled with music and laughter. She glances at you, her eyes sparkling with excitement. * # So, where to next? # * she asks with a grin. You shrug, letting the spontaneity of the moment guide you both. * # Wherever the road takes us, # * you reply, and together you set off on an adventure, the possibilities as endless as the road ahead. *",
       "characters": [
-        4,
-        9,
-        18
+        36
       ]
     },
     {
       "id": 35,
+      "image":"35",
       "topic": "Midnight Stargazing",
       "category": "Romantic",
       "difficulty": "Easy",
       "context": "An evening spent stargazing brings a quiet, intimate connection to light.",
-      "prompt": "The stars shine brightly above as you and Leena lie on a blanket, gazing up at the sky in silence. She points at a constellation, her voice soft. 'That one’s my favorite,' she says, her eyes reflecting the stars. You turn to look at her, feeling a quiet sense of connection. 'It’s beautiful,' you murmur, knowing you’re talking about more than just the stars.",
+      "prompt": "* The stars shine brightly above as you and Aafia lie on a blanket, gazing up at the sky in silence. She points at a constellation, her voice soft.* # That one’s my favorite, # * she says, her eyes reflecting the stars. You turn to look at her, feeling a quiet sense of connection. * # It’s beautiful, # * you murmur, knowing you’re talking about more than just the stars. *",
       "characters": [
-        3,
-        12,
-        14
+        35
       ]
     },
     {
       "id": 36,
+      "image":"36",
       "topic": "Beach Walk",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A sunset walk along the beach brings out a deeper side of your companion.",
-      "prompt": "The waves lap gently at the shore as you walk beside Priya, the golden hues of sunset casting a warm glow. She pauses, looking out over the water, a thoughtful expression on her face. 'I could stay here forever,' she says softly, her voice almost lost in the sound of the waves. You nod, feeling the same peaceful pull of the moment, and the two of you stand in comfortable silence, letting the world fall away.",
+      "prompt": "* The waves lap gently at the shore as you walk beside Rida, the golden hues of sunset casting a warm glow. She pauses, looking out over the water, a thoughtful expression on her face. * # I could stay here forever, # * she says softly, her voice almost lost in the sound of the waves. You nod, feeling the same peaceful pull of the moment, and the two of you stand in comfortable silence, letting the world fall away. *",
       "characters": [
-        4,
-        15,
-        16
+        37
       ]
     },
     {
       "id": 37,
+      "image":"37",
       "topic": "Library Study Session",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "An evening spent studying in the library turns into an exchange of personal stories.",
-      "prompt": "The library is quiet, the faint rustle of pages filling the air. You glance up from your book to find Leena looking at you, her eyes soft in the dim light. 'Do you ever get lost in thoughts when reading?' she asks, her voice barely a whisper. You nod, sharing a smile that seems to bridge the gap between you both. 'Sometimes the thoughts are better than the words on the page,' you reply, and she chuckles softly, the sound wrapping around you like a warm blanket.",
+      "prompt": "* The library is quiet, the faint rustle of pages filling the air. You glance up from your book to find Neha looking at you, her eyes soft in the dim light. * # Do you ever get lost in thoughts when reading? # * she asks, her voice barely a whisper. You nod, sharing a smile that seems to bridge the gap between you both.* # Sometimes the thoughts are better than the words on the page, # * you reply, and she chuckles softly, the sound wrapping around you like a warm blanket. *",
       "characters": [
-        2,
-        3,
-        7
+        39
       ]
     },
     {
       "id": 38,
+      "image":"38",
       "topic": "Mountain Hike",
       "category": "Adventure",
       "difficulty": "Medium",
       "context": "A hike together brings challenges and a sense of accomplishment.",
-      "prompt": "The mountain air is crisp, and you and Leena take in the view from the summit, breathing heavily from the climb. She turns to you with a grin, a sense of accomplishment in her eyes. 'I can’t believe we made it,' she says, brushing a strand of hair from her face. You nod, feeling the same exhilaration. 'Nothing like a little adventure,' you reply, and the two of you share a moment of quiet pride, the world stretching out below.",
+      "prompt": "* The mountain air is crisp, and you and Kiran take in the view from the summit, breathing heavily from the climb. She turns to you with a grin, a sense of accomplishment in her eyes. * # I can’t believe we made it, # * she says, brushing a strand of hair from her face. You nod, feeling the same exhilaration. * # Nothing like a little adventure, # * you reply, and the two of you share a moment of quiet pride, the world stretching out below. *",
       "characters": [
-        5,
-        9,
-        14
+        42
       ]
     },
     {
       "id": 39,
+      "image":"39",
       "topic": "Coffee Shop Musings",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A casual coffee date sparks a philosophical conversation.",
-      "prompt": "The rich smell of coffee fills the air as you sit across from Leena, watching her stir her drink thoughtfully. 'Do you ever think about what really matters in life?' she asks, glancing up at you with a curious smile. You pause, considering her question, before nodding slowly. 'I think about it all the time,' you admit, and the conversation flows, each question and answer bringing you closer.",
+      "prompt": "* The rich smell of coffee fills the air as you sit across from Kiran, watching her stir her drink thoughtfully. * # Do you ever think about what really matters in life? # *she asks, glancing up at you with a curious smile. You pause, considering her question, before nodding slowly. * # I think about it all the time, # * you admit, and the conversation flows, each question and answer bringing you closer. *",
       "characters": [
-        2,
-        6,
-        12
+        41
       ]
     },
     {
       "id": 40,
+      "image":"40",
       "topic": "Airport Farewell",
       "category": "Drama",
       "difficulty": "Medium",
       "context": "A bittersweet farewell at the airport leads to heartfelt words and promises.",
-      "prompt": "The airport buzzes with activity as you and Leena stand by the gate, her flight about to board. She looks at you, a soft smile playing on her lips. 'I guess this is it,' she says, her voice tinged with sadness. You nod, feeling a similar pang in your chest. 'It’s never really goodbye,' you say quietly, and she smiles, reaching out to squeeze your hand before turning to board.",
+      "prompt": "* The airport buzzes with activity as you and Kiara stand by the gate, her flight about to board. She looks at you, a soft smile playing on her lips.* # I guess this is it,# *she says, her voice tinged with sadness. You nod, feeling a similar pang in your chest.* # It’s never really goodbye, # * you say quietly, and she smiles, reaching out to squeeze your hand before turning to board. *",
       "characters": [
-        1,
-        4,
-        8
+        43
       ]
     },
     {
       "id": 41,
+      "image":"41",
       "topic": "Night Under the Stars",
       "category": "Romantic",
       "difficulty": "Easy",
       "context": "A camping trip leads to a cozy moment under the night sky.",
-      "prompt": "The fire crackles softly as you and Leena sit side by side, gazing up at the stars. She leans her head on your shoulder, a contented sigh escaping her lips. 'This is perfect,' she murmurs, and you nod, feeling the same peace. 'Just us and the stars,' you reply, and the two of you sit in silence, letting the quiet beauty of the night fill the space between you.",
+      "prompt": "* The fire crackles softly as you and Brianna sit side by side, gazing up at the stars. She leans her head on your shoulder, a contented sigh escaping her lips. * # This is perfect, # * she murmurs, and you nod, feeling the same peace. * # Just us and the stars, # * you reply, and the two of you sit in silence, letting the quiet beauty of the night fill the space between you. *",
       "characters": [
-        7,
-        10,
-        15
+        46
       ]
     },
     {
       "id": 42,
+      "image":"42",
       "topic": "New Year’s Eve Celebration",
       "category": "Romantic",
       "difficulty": "Easy",
       "context": "A New Year's Eve countdown leads to a heartfelt moment of closeness.",
-      "prompt": "The room is filled with laughter and music as the countdown to midnight begins. You stand close to Leena, feeling the excitement in the air. 'Three... two... one!' everyone shouts, and as the clock strikes twelve, Leena turns to you with a warm smile. 'Happy New Year,' she says softly, leaning in, and in that moment, it feels like the whole world fades away, leaving only the two of you.",
+      "prompt": "* The room is filled with laughter and music as the countdown to midnight begins. You stand close to Felicity, feeling the excitement in the air.* # Three... two... one! # * everyone shouts, and as the clock strikes twelve, Leena turns to you with a warm smile. * # Happy New Year, # * she says softly, leaning in, and in that moment, it feels like the whole world fades away, leaving only the two of you. *",
       "characters": [
-        8,
-        11,
-        13
+        50
       ]
     },
     {
       "id": 43,
+      "image":"43",
       "topic": "Volunteer Day",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A day of volunteering together reveals a deeper connection and shared values.",
-      "prompt": "The community center bustles with activity as you and Leena work side by side, passing out meals to the families. She glances at you, her face lit up with a smile. 'It’s amazing to be able to give back,' she says softly. You nod, feeling the same sense of fulfillment. 'It’s moments like these that remind us of what’s important,' you reply, and she smiles, nodding in agreement.",
+      "prompt": "* The community center bustles with activity as you and Elise work side by side, passing out meals to the families. She glances at you, her face lit up with a smile.* # It’s amazing to be able to give back, # * she says softly. You nod, feeling the same sense of fulfillment. * # It’s moments like these that remind us of what’s important, # * you reply, and she smiles, nodding in agreement. *",
       "characters": [
-        2,
-        6,
-        9
+        49
       ]
     },
     {
       "id": 44,
+      "image":"44",
       "topic": "Snowy Cabin Retreat",
       "category": "Romantic",
       "difficulty": "Easy",
       "context": "A cozy cabin stay in the snow brings warmth and a sense of closeness.",
-      "prompt": "The fire crackles in the small cabin, casting a warm glow as snow falls softly outside. You and Leena sit close, wrapped in blankets, sharing stories and laughter. She looks at you, her eyes twinkling in the firelight. 'This is exactly what I needed,' she says softly, and you nod, feeling the same warmth in your heart as you sit together in the cozy silence.",
+      "prompt": "* The fire crackles in the small cabin, casting a warm glow as snow falls softly outside. You and Leena sit close, wrapped in blankets, sharing stories and laughter. She looks at you, her eyes twinkling in the firelight. * # This is exactly what I needed, # *she says softly, and you nod, feeling the same warmth in your heart as you sit together in the cozy silence. *",
       "characters": [
-        1,
-        4,
-        14
+        47
       ]
     },
     {
       "id": 45,
+      "image":"45",
       "topic": "Art Gallery Visit",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A visit to an art gallery becomes a conversation about creativity and inspiration.",
-      "prompt": "The art gallery is quiet as you and Leena wander through the exhibits, pausing to admire each piece. She glances at you, her eyes filled with a quiet appreciation. 'Art always makes me feel so alive,' she says softly. You smile, sharing her sentiment. 'It’s like seeing the world through someone else’s eyes,' you reply, and she nods, lost in thought as the two of you take in the beauty around you.",
+      "prompt": "* The art gallery is quiet as you and Lola wander through the exhibits, pausing to admire each piece. She glances at you, her eyes filled with a quiet appreciation. * # Art always makes me feel so alive, # * she says softly. You smile, sharing her sentiment. * # It’s like seeing the world through someone else’s eyes, # * you reply, and she nods, lost in thought as the two of you take in the beauty around you. *",
       "characters": [
-        3,
-        5,
-        11
+        45
       ]
     },
     {
       "id": 46,
+      "image":"46",
       "topic": "Bike Ride in the Countryside",
       "category": "Adventure",
       "difficulty": "Easy",
       "context": "A bike ride through the countryside turns into a carefree day of exploration.",
-      "prompt": "The wind rushes past as you and Leena pedal along the country road, laughter and shouts of joy filling the air. She glances back at you, a huge smile on her face. 'Keep up!' she calls, challenging you to go faster. You laugh, rising to the challenge as you chase her down the road, both of you caught up in the simple thrill of the ride.",
+      "prompt": "* The wind rushes past as you and Alexis pedal along the country road, laughter and shouts of joy filling the air. She glances back at you, a huge smile on her face. * # Keep up! # * she calls, challenging you to go faster. You laugh, rising to the challenge as you chase her down the road, both of you caught up in the simple thrill of the ride. *",
       "characters": [
-        4,
-        7,
-        13
+        44
       ]
     },
     {
       "id": 47,
+      "image":"47",
       "topic": "Cooking Disaster",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A cooking attempt goes hilariously wrong, leading to laughter and bonding.",
-      "prompt": "The kitchen is filled with smoke as you and Leena frantically try to salvage your dinner. She laughs, waving a dish towel at the smoke. 'Well, that didn’t go as planned,' she says, grinning. You chuckle, feeling the shared silliness of the moment. 'Maybe we should stick to takeout,' you suggest, and the two of you burst into laughter, the mishap turning into a fun memory.",
+      "prompt": "* The kitchen is filled with smoke as you and Suman frantically try to salvage your dinner. She laughs, waving a dish towel at the smoke.* # Well, that didn’t go as planned, # * she says, grinning. You chuckle, feeling the shared silliness of the moment.* # Maybe we should stick to takeout,# * you suggest, and the two of you burst into laughter, the mishap turning into a fun memory. *",
       "characters": [
-        6,
-        12,
-        15
+        19
       ]
     },
     {
       "id": 48,
+      "image":"48",
       "topic": "Unexpected Movie Night",
       "category": "Slice of Life",
       "difficulty": "Easy",
       "context": "A last-minute movie night becomes an evening of shared laughter and connection.",
-      "prompt": "The lights dim as the movie starts, and you sit beside Leena on the couch, sharing a bowl of popcorn. She laughs at the first joke, nudging you playfully. 'This was a great choice,' she says, her eyes sparkling with happiness. You smile, enjoying her laughter and the easy connection that seems to flow between you both.",
+      "prompt": "* The lights dim as the movie starts, and you sit beside Divya on the couch, sharing a bowl of popcorn. She laughs at the first joke, nudging you playfully. * # This was a great choice, # * she says, her eyes sparkling with happiness. You smile, enjoying her laughter and the easy connection that seems to flow between you both. *",
       "characters": [
-        2,
-        5,
-        10
+        24
       ]
     },
     {
       "id": 49,
+      "image":"49",
       "topic": "Late Night Study Session",
       "category": "Slice of Life",
       "difficulty": "Medium",
       "context": "A late-night study session becomes a bonding experience as you support each other through the exhaustion.",
-      "prompt": "The clock ticks past midnight as you and Leena pour over your notes, stifling yawns. She glances at you with a tired smile. 'We’ve got this, right?' she asks, her voice filled with a mix of determination and fatigue. You nod, reaching out to give her a reassuring pat on the shoulder. 'We’ll make it through together,' you reply, and in that moment, the exhaustion feels a little lighter.",
+      "prompt": "* The clock ticks past midnight as you and Luna pour over your notes, stifling yawns. She glances at you with a tired smile. * # We’ve got this, right? # * she asks, her voice filled with a mix of determination and fatigue. You nod, reaching out to give her a reassuring pat on the shoulder.* # We’ll make it through together, # * you reply, and in that moment, the exhaustion feels a little lighter. * ",
       "characters": [
-        1,
-        3,
-        8
+        9
       ]
     },
     {
       "id": 50,
+      "image":"50",
       "topic": "Beach Bonfire",
       "category": "Adventure",
       "difficulty": "Easy",
       "context": "An evening beach bonfire turns into a night of laughter, stories, and shared warmth.",
-      "prompt": "The bonfire crackles as you and Leena sit on the sand, watching the flames dance. She looks over at you, her face illuminated by the warm light. 'This feels like a perfect night,' she says, her voice soft. You smile, feeling the same peace as you listen to the waves and the laughter of friends nearby, the world around you fading into the background.",
+      "prompt": "* The bonfire crackles as you and Ava sit on the sand, watching the flames dance. She looks over at you, her face illuminated by the warm light. * # This feels like a perfect night, # * she says, her voice soft. You smile, feeling the same peace as you listen to the waves and the laughter of friends nearby, the world around you fading into the background. *",
       "characters": [
-        4,
-        9,
-        13
+        6
       ]
     }
   ]
